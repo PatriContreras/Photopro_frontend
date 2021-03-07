@@ -8,6 +8,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { PrincipalComponent } from './components/principal/principal.component';
 import { PerfilClienteComponent } from './components/perfil-cliente/perfil-cliente.component';
 import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-fotografo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-f
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
