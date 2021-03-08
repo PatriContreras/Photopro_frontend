@@ -1,9 +1,40 @@
+@import 'variables';
 
 form{
     z-index: 999;
-   position: relative;
+    position: relative;
+  width: 50%;
+  background-color: rgb(255, 255, 255, 0.9);
+  padding: 25px;
+  margin-top: 50%;
+  margin-left: 30%;
+  font-family: $normalFont;
+  
+
     
 }
+form .form-group{
+    font-family: $secondTitle;
+}
+
+
+
+ h1 {
+    width: 100%;
+    background:#587886;
+    color: white;
+    font-size: 25px;
+    justify-content: center;
+    font-weight: 200px;
+    text-align: center;
+    font-family: $secondTitle;
+
+
+
+}
+
+
+
 .slidershow{
     width: 100%;
     height: 100%;

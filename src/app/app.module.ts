@@ -9,6 +9,8 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { PerfilClienteComponent } from './components/perfil-cliente/perfil-cliente.component';
 import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-fotografo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormularioClientesComponent } from './components/formulario-clientes/formulario-clientes.component';
+import { AccesoComponent } from './components/acceso/acceso.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormularioComponent,
     PrincipalComponent,
     PerfilClienteComponent,
-    PerfilFotografoComponent
+    PerfilFotografoComponent,
+    FormularioClientesComponent,
+    AccesoComponent
 
   ],
   imports: [
