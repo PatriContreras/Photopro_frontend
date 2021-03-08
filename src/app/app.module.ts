@@ -11,6 +11,7 @@ import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-f
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

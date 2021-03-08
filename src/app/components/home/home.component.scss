@@ -11,15 +11,31 @@
     
 }
 
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    a {
+        text-decoration: none;
+        font-family: $titleFont;
+        color: white;
+        font-size: 3em;
+        i {
+            color: white;
+        }
+    }
+}
+
 #title {
     font-family: $titleFont;
-    font-size: 4.5em;
+    font-size: 3em;
     color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+    // height: 50%;
 }
 
 
