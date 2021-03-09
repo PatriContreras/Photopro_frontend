@@ -1,22 +1,19 @@
 <main>
     <nav>
-        <p id="title"> Photopro </p>
-        <a href=""><i class="fas fa-user"></i>Log In</a>
+        <h1 class="title"> Photopro </h1>
+        <p class="subtitle"> ¡Encuentra tu fotógrafo!</p>
+        <a [routerLink]="['/registro']"><i class="fas fa-user"></i>Log In</a>
     </nav>
-    <div class="containered">
-        <!-- <div id="title">
-            <p> PhotoPro </p>
-        </div> -->
 
+    <div class="containered">
         <div class="enlaces">
             <div id="usuario">
-                <a [routerLink]="['/usuario']">Busco Fotógrafo</a>
+                <a [routerLink]="['/descubrir']">Busco Fotógrafo</a>
             </div>
             <div id="fotografo">
                 <a [routerLink]="['/registro']">Soy Fotógrafo</a>
             </div>
         </div>
     </div>
-
 
 </main>
