@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans+Condensed:wght@300&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Open+Sans+Condensed:wght@300&display=swap');
 
 $titleFont: 'Dancing Script', cursive;
+$normalFont: 'Montserrat', sans-serif;
+$secondTitle:'Montserrat', sans-serif;
 
-$normalFont: 'Open Sans Condensed' sans-serif;
 
-$secondTitle: 'Bebas Neue', cursive;
 
+
+$colorPrimario: #A8B6C0;
+$colorSecundario: #587886;
+$colorTerciario:#5A6265;
 
 

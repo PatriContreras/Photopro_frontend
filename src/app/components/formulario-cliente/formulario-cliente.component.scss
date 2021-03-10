@@ -1,13 +1,13 @@
 @import 'variables';
 
 form{
-    
+    position: relative;
     
     position: relative;
-  width: 40%;
+  width: 30%;
   background-color: rgb(255, 255, 255, 0.9);
   padding: 25px;
-  margin-top: 3%;
+  margin-top: 4%;
   margin-left: 40%;
   font-family:$secondTitle ;
  
@@ -54,12 +54,10 @@ form .form-group{
    
   opacity: 0.7;
   z-index: -2;
-  
-      img{
-        height: 1000px;
-      }
+  img{
+    height: 1000px;
+  }
 }
-
 
 
 
