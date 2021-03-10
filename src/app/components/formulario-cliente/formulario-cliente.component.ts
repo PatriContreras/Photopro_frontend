@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
 
-import { debounceTime } from 'rxjs/operators'
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.scss']
+  selector: 'app-formulario-cliente',
+  templateUrl: './formulario-cliente.component.html',
+  styleUrls: ['./formulario-cliente.component.scss']
 })
-export class FormularioComponent implements OnInit {
+export class FormularioClienteComponent implements OnInit {
 
   formulario: FormGroup
 
   constructor() {
-
     this.formulario = new FormGroup({
-
       nombre: new FormControl('', [
+
         Validators.required
       ]),
 
@@ -36,17 +35,11 @@ export class FormularioComponent implements OnInit {
           Validators.maxLength(20)
 
         ]),
-      direccion: new FormControl('', [
-        Validators.required
-
-
-      ]),
 
       password: new FormControl('', [
         Validators.required,
         Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$/)
       ]),
-
       password_2: new FormControl()
     }, [this.passwordValidator])
   }
@@ -54,13 +47,14 @@ export class FormularioComponent implements OnInit {
 
 
   ngOnInit(): void {
-
     const emailControl = this.formulario.get('email');
 
     emailControl.valueChanges.pipe(debounceTime(2000)).subscribe((value) => {
       console.log(value)
     })
   }
+
+
 
 
 
@@ -83,5 +77,4 @@ export class FormularioComponent implements OnInit {
   onSubmit() {
     console.log(this.formulario.value)
   }
-
 }
