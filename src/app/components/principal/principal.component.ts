@@ -12,4 +12,13 @@ export class PrincipalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openNav() {
+    console.log('Hola!');
+
+  }
+
+  closeNav() {
+
+  }
+
 }
