@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-acceso',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccesoComponent implements OnInit {
 
-  constructor() { }
+  formulario: FormGroup
+
+  constructor() {
+    this.formulario = new FormGroup({
+      email: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,4}$/)
+      ]),
+
+      password: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$/)
+      ])
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    //navigate
   }
 
 }
