@@ -1,12 +1,83 @@
-<nav>
-    <div class="discover">
-        <span (onClick)="openNav()">&#9776; Descubrir</span>
-    </div>
+<main [ngStyle]="mainStyle">
+    <nav>
+        <div class="discover">
+            <span (click)="openNav()">&#9776; Descubrir</span>
+        </div>
 
-    <!-- <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" (onClick)="closeNav()">&times;</a>
-    </div> -->
+        <div id="mySidenav" class="sidenav" [ngStyle]="sideNavStyle">
+            <a class="closebtn" (click)="closeNav()">&times;</a>
+            <form>
+                <div class="buscarNombre">
+                    <label class="form-check-label">Buscar:</label>
+                    <input type="text" id="buscar">
+                </div>
 
-    <h1 class="title"> Photopro </h1>
-    <a [routerLink]="['/login']"><i class="fas fa-user"></i>Log In</a>
-</nav>
+                <div class="seleccionarCiudad">
+                    <label class="form-check-label">Ubicación:</label>
+                    <select class="form-control">
+                        <option selected>Selecciona una ciudad</option>
+                    </select>
+                </div>
+
+
+                <div id="filtros">
+                    <p>Tipo de fotografía</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="bbc">
+                        <label class="form-check-label">Bodas</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="eventosnocturnos">
+                        <label class="form-check-label">Eventos nocturnos</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="producto">
+                        <label class="form-check-label">Producto</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="publicidad">
+                        <label class="form-check-label">Publicidad</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="paisaje">
+                        <label class="form-check-label">Paisaje</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="retrato">
+                        <label class="form-check-label">Retrato</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="modelos">
+                        <label class="form-check-label">Modelos</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="artistica">
+                        <label class="form-check-label">Artística</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="documental">
+                        <label class="form-check-label">Documental</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="deportes">
+                        <label class="form-check-label">Deportes</label>
+                    </div>
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Filtrar">
+
+
+            </form>
+
+
+            <!-- <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a> -->
+        </div>
+
+        <h1 class="title"> Photopro </h1>
+        <a [routerLink]="['/login']"><i class="fas fa-user"></i>Log In</a>
+    </nav>
+</main>
