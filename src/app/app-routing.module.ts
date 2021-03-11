@@ -13,9 +13,9 @@ import { PrincipalComponent } from './components/principal/principal.component';
 const routes: Routes = [
 
   { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'registro', component: FormularioComponent },
+  { path: 'registro_fotografo', component: FormularioComponent },
   { path: 'login', component: AccesoComponent },
-  { path: 'registro2', component: FormularioClienteComponent },
+  { path: 'registro_cliente', component: FormularioClienteComponent },
 
   { path: 'usuario', component: PerfilClienteComponent },
   { path: 'fotografo', component: PerfilFotografoComponent },
