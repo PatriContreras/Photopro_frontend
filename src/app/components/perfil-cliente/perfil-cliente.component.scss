@@ -1,0 +1,53 @@
+@import 'variables';
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+.imagen-container {
+    width: 50%;
+    background-image: url(../../../assets/images/perfil-cliente/imagenCliente.jpg);
+    background-size: cover;
+    background-position:  center center;
+}
+
+.perfil-cliente {
+    width: 50%;
+    display: block;
+    align-content: flex-end;
+    div {
+        border-top: $colorPrimario 5px solid;
+        border-left: $colorPrimario 3px solid;
+    }
+    .bienvenida {
+        font-family: $titleFont;
+        background-color: $colorPrimario;
+        color: $colorSecundario;
+        padding: 50px;
+        font-size: 2.8em;
+        p {
+            text-align: center;
+        }
+    }
+
+    .opciones {
+        font-family: $normalFont;
+        background-color: $colorSecundario;
+        padding: 50px;
+        font-size: 1.5em;
+        a {
+            text-decoration: none;
+            color: $colorPrimario;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+}
+
+
+
+
+
