@@ -12,6 +12,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AccesoComponent } from './components/acceso/acceso.component';
 import { FormularioClienteComponent } from './components/formulario-cliente/formulario-cliente.component';
+import { PortfolioComponent } from './components/perfil-fotografo/portfolio/portfolio.component';
+import { OpinionesComponent } from './components/perfil-fotografo/opiniones/opiniones.component';
+import { AjustesComponent } from './components/perfil-fotografo/ajustes/ajustes.component';
+import { BiografiaComponent } from './components/perfil-fotografo/biografia/biografia.component';
+
 
 
 
@@ -23,10 +28,12 @@ import { FormularioClienteComponent } from './components/formulario-cliente/form
     PrincipalComponent,
     PerfilClienteComponent,
     PerfilFotografoComponent,
-
     AccesoComponent,
-    FormularioClienteComponent
-
+    FormularioClienteComponent,
+    OpinionesComponent,
+    PortfolioComponent,
+    AjustesComponent,
+    BiografiaComponent
   ],
   imports: [
     BrowserModule,

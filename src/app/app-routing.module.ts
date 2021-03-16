@@ -6,7 +6,11 @@ import { FormularioClienteComponent } from './components/formulario-cliente/form
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { HomeComponent } from './components/home/home.component';
 import { PerfilClienteComponent } from './components/perfil-cliente/perfil-cliente.component';
+import { AjustesComponent } from './components/perfil-fotografo/ajustes/ajustes.component';
+import { BiografiaComponent } from './components/perfil-fotografo/biografia/biografia.component';
+import { OpinionesComponent } from './components/perfil-fotografo/opiniones/opiniones.component';
 import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-fotografo.component';
+import { PortfolioComponent } from './components/perfil-fotografo/portfolio/portfolio.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 
 
@@ -18,7 +22,24 @@ const routes: Routes = [
   { path: 'registro_cliente', component: FormularioClienteComponent },
 
   { path: 'usuario', component: PerfilClienteComponent },
-  { path: 'fotografo', component: PerfilFotografoComponent },
+  {
+    path: 'fotografo/:fotografoId', component: PerfilFotografoComponent,
+    children: [
+      {
+        path: 'opiniones', component: OpinionesComponent
+      },
+      {
+        path: 'bio', component: BiografiaComponent
+      },
+      {
+        path: 'portfolio', component: PortfolioComponent
+      },
+      {
+        path: 'ajustes', component: AjustesComponent
+      }
+
+    ]
+  },
   { path: 'descubrir', component: PrincipalComponent },
   { path: '**', redirectTo: '' }
 
