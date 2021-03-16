@@ -9,13 +9,13 @@
         </div>
 
         <div class="opciones">
-            <a href="">Tus datos personales</a>
+            <a [href]="">Tus datos personales</a>
         </div>
         <div class="opciones">
-            <a href="">Tus fotógrafos favoritos</a>
+            <a [routerLink]="['/favoritos']">Tus fotógrafos favoritos</a>
         </div>
         <div class="opciones">
-            <a href="">Cambiar contraseña</a>
+            <a href="">Tus reservas</a>
         </div>
         <div class="opciones">
             <a [routerLink]="['/descubrir']">Salir</a>
@@ -23,5 +23,7 @@
 
     </div>
 
+
+    <router-outlet></router-outlet>
 
 </main>
