@@ -11,6 +11,8 @@ import { PerfilClienteComponent } from './components/perfil-cliente/perfil-clien
 import { ReservasComponent } from './components/perfil-cliente/reservas/reservas.component';
 import { AjustesComponent } from './components/perfil-fotografo/ajustes/ajustes.component';
 import { BiografiaComponent } from './components/perfil-fotografo/biografia/biografia.component';
+import { ContactoComponent } from './components/perfil-fotografo/contacto/contacto.component';
+import { DisponibilidadComponent } from './components/perfil-fotografo/disponibilidad/disponibilidad.component';
 import { OpinionesComponent } from './components/perfil-fotografo/opiniones/opiniones.component';
 import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-fotografo.component';
 import { PortfolioComponent } from './components/perfil-fotografo/portfolio/portfolio.component';
@@ -38,7 +40,14 @@ const routes: Routes = [
       },
       {
         path: 'ajustes', component: AjustesComponent
-      }
+      },
+      {
+        path: 'disponibilidad', component: DisponibilidadComponent
+      },
+      {
+        path: 'contacto', component: ContactoComponent
+      },
+
 
     ]
   },

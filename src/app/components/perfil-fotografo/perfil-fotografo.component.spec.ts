@@ -6,11 +6,12 @@ describe('PerfilFotografoComponent', () => {
   let component: PerfilFotografoComponent;
   let fixture: ComponentFixture<PerfilFotografoComponent>;
 
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PerfilFotografoComponent ]
+      declarations: [PerfilFotografoComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
