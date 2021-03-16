@@ -1,7 +1,7 @@
 @import 'variables';
 
 nav {
-    background-color: black;
+    background-color: $colorPrimario;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -38,3 +38,75 @@ nav {
     color: white;
 }
 
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $colorPrimario;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav form {
+  padding: 40px 25px 25px 32px;
+  text-decoration: none;
+  font-family: $secondTitle;
+  font-size: 1.25em;
+  color: white;
+  display: block;
+  transition: 0.5s;
+  line-height: 35px;
+  
+}
+
+
+p {
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.buscarNombre {
+    font-weight: 700;
+}
+
+#buscar {
+    width: 100%;;
+}
+
+.seleccionarCiudad {
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+.btn {
+    margin-top: 30px;
+    background-color: $colorSecundario;
+    color: white;
+    border: $colorPrimario;
+    
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $colorSecundario;
+    border-color: $colorPrimario;
+
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+main {
+  transition: margin-left .5s;
+}

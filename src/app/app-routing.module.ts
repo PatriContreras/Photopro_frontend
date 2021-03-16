@@ -39,6 +39,9 @@ const routes: Routes = [
 
     ]
   },
+
+  { path: 'cliente', component: PerfilClienteComponent },
+  { path: 'fotografo', component: PerfilFotografoComponent },
   { path: 'descubrir', component: PrincipalComponent },
   { path: '**', redirectTo: '' }
 

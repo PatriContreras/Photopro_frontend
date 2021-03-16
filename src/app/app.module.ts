@@ -34,6 +34,7 @@ import { BiografiaComponent } from './components/perfil-fotografo/biografia/biog
     PortfolioComponent,
     AjustesComponent,
     BiografiaComponent
+
   ],
   imports: [
     BrowserModule,
