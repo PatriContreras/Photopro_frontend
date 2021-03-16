@@ -20,7 +20,6 @@ const routes: Routes = [
   { path: 'registro_fotografo', component: FormularioComponent },
   { path: 'login', component: AccesoComponent },
   { path: 'registro_cliente', component: FormularioClienteComponent },
-
   { path: 'usuario', component: PerfilClienteComponent },
   {
     path: 'fotografo/:fotografoId', component: PerfilFotografoComponent,
