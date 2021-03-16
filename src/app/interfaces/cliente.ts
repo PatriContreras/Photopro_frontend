@@ -3,5 +3,5 @@ export interface Cliente {
     apellidos: string,
     direccion: string,
     email: string,
-    contraseña: string
+    password: string
 }
