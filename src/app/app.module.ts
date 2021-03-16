@@ -25,7 +25,7 @@ import { FormularioClienteComponent } from './components/formulario-cliente/form
     PerfilFotografoComponent,
 
     AccesoComponent,
-    FormularioClienteComponent
+    FormularioClienteComponent,
 
   ],
   imports: [

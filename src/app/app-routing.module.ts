@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'login', component: AccesoComponent },
   { path: 'registro_cliente', component: FormularioClienteComponent },
 
-  { path: 'usuario', component: PerfilClienteComponent },
+  { path: 'cliente', component: PerfilClienteComponent },
   { path: 'fotografo', component: PerfilFotografoComponent },
   { path: 'descubrir', component: PrincipalComponent },
   { path: '**', redirectTo: '' }
