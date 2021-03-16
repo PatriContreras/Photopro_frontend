@@ -16,6 +16,8 @@ import { PortfolioComponent } from './components/perfil-fotografo/portfolio/port
 import { OpinionesComponent } from './components/perfil-fotografo/opiniones/opiniones.component';
 import { AjustesComponent } from './components/perfil-fotografo/ajustes/ajustes.component';
 import { BiografiaComponent } from './components/perfil-fotografo/biografia/biografia.component';
+import { ContactoComponent } from './components/perfil-fotografo/contacto/contacto.component';
+import { DisponibilidadComponent } from './components/perfil-fotografo/disponibilidad/disponibilidad.component';
 
 
 
@@ -33,7 +35,9 @@ import { BiografiaComponent } from './components/perfil-fotografo/biografia/biog
     OpinionesComponent,
     PortfolioComponent,
     AjustesComponent,
-    BiografiaComponent
+    BiografiaComponent,
+    ContactoComponent,
+    DisponibilidadComponent
 
   ],
   imports: [

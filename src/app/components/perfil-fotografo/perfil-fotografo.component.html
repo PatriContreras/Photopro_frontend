@@ -9,22 +9,33 @@
 
             <h1>Antonio Galan</h1>
 
-            <div class="ubicacion">
+            <div class="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <h3>Madrid (Comunidad autonoma de Madrid)</h3>
+
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fas fa-link"></i>
             </div>
-
-
-            <div class="col-8 offset-4">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary">Portfolio</button>
-                    <button type="button" class="btn btn-secondary">Bio</button>
-                    <button type="button" class="btn btn-secondary">Reseñas</button>
-                    <button type="button" class="btn btn-secondary">Contacto</button>
-                </div>
-            </div>
-
         </div>
+
+
+
+        <div class="botonera">
+            <div class="btn-group btn-group-justified">
+                <button [routerLink]="['/fotografo', idFotografo, 'portfolio']" type="button"
+                    class="btn btn-secondary">Portfolio</button>
+                <button [routerLink]="['/fotografo', idFotografo, 'bio']" type="button"
+                    class="btn btn-secondary">Bio</button>
+                <button [routerLink]="['/fotografo', idFotografo, 'opiniones']" type="button"
+                    class="btn btn-secondary">Reseñas</button>
+                <button [routerLink]="['/fotografo', idFotografo, 'contacto']" type="button"
+                    class="btn btn-secondary">Contacto</button>
+                <button [routerLink]="['/fotografo', idFotografo, 'disponibilidad']" type="button"
+                    class="btn btn-secondary">Disponibilidad</button>
+            </div>
+        </div>
+
 
 
 
@@ -39,6 +50,7 @@
             <div></div>
 
         </div>
+        <router-outlet></router-outlet>
         <!--  fotografias, bio, reseñas y mensajes -->
     </main>
 </div>
