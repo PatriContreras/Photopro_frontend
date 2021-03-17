@@ -11,6 +11,7 @@ export class FotografoService {
   constructor() {
     this.fotografos = [
       {
+
         nombre: 'Pedro',
         apellidos: 'Galan Martinez',
         direccion: 'Calle Atocha 43',
