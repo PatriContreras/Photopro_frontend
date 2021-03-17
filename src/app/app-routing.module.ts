@@ -52,21 +52,11 @@ const routes: Routes = [
     ]
   },
   // { path: 'cliente', component: PerfilClienteComponent },
-  {
-    path: 'cliente/:clienteId', component: PerfilClienteComponent,
-    // children: [
-    //   {
-    //     path: 'datos-personales', component: DatosPersonalesComponent
-    //   },
-    //   {
-    //     path: 'favoritos', component: FavoritosComponent
-    //   },
-    //   {
-    //     path: 'reservas', component: ReservasComponent
-    //   },
-    // ]
-  },
+  { path: 'cliente/:clienteId', component: PerfilClienteComponent },
   { path: 'cliente/:clienteId/favoritos', component: FavoritosComponent },
+  { path: 'cliente/:clienteId/reservas', component: ReservasComponent },
+  { path: 'cliente/:clienteId/datos-personales', component: DatosPersonalesComponent },
+
   { path: 'fotografo', component: PerfilFotografoComponent },
   { path: 'descubrir', component: PrincipalComponent },
   { path: '**', redirectTo: '' }

@@ -16,14 +16,11 @@ import { PortfolioComponent } from './components/perfil-fotografo/portfolio/port
 import { OpinionesComponent } from './components/perfil-fotografo/opiniones/opiniones.component';
 import { AjustesComponent } from './components/perfil-fotografo/ajustes/ajustes.component';
 import { BiografiaComponent } from './components/perfil-fotografo/biografia/biografia.component';
-<<<<<<< HEAD
 import { DatosPersonalesComponent } from './components/perfil-cliente/datos-personales/datos-personales.component';
 import { FavoritosComponent } from './components/perfil-cliente/favoritos/favoritos.component';
 import { ReservasComponent } from './components/perfil-cliente/reservas/reservas.component';
-=======
 import { ContactoComponent } from './components/perfil-fotografo/contacto/contacto.component';
 import { DisponibilidadComponent } from './components/perfil-fotografo/disponibilidad/disponibilidad.component';
->>>>>>> develop
 
 
 
@@ -42,14 +39,11 @@ import { DisponibilidadComponent } from './components/perfil-fotografo/disponibi
     PortfolioComponent,
     AjustesComponent,
     BiografiaComponent,
-<<<<<<< HEAD
     DatosPersonalesComponent,
     FavoritosComponent,
-    ReservasComponent
-=======
+    ReservasComponent,
     ContactoComponent,
     DisponibilidadComponent
->>>>>>> develop
 
   ],
   imports: [
