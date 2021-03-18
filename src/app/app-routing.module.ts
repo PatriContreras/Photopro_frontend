@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'registro_fotografo', component: FormularioComponent },
   { path: 'login', component: AccesoComponent },
   { path: 'registro_cliente', component: FormularioClienteComponent },
+  { path: 'fotografo/:fotografoId/ajustes', component: AjustesComponent },
   { path: 'usuario', component: PerfilClienteComponent },
   {
     path: 'fotografo/:fotografoId', component: PerfilFotografoComponent,
@@ -38,9 +39,7 @@ const routes: Routes = [
       {
         path: 'portfolio', component: PortfolioComponent
       },
-      {
-        path: 'ajustes', component: AjustesComponent
-      },
+
       {
         path: 'disponibilidad', component: DisponibilidadComponent
       },

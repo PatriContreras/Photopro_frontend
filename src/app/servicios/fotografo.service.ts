@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { promise } from 'selenium-webdriver';
 import { Fotografo } from '../interfaces/fotografo';
 
 @Injectable({
@@ -45,6 +46,10 @@ export class FotografoService {
     return this.httpClient.post(this.baseUrl, formValues).toPromise();
   }
 
+  fotografoById(pId): Promise<any> {
+    return this.httpClient.get(`${this.baseUrl}/${pId}`).toPromise()
+
+  }
 
 
 }
