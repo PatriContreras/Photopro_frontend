@@ -51,5 +51,10 @@ export class FotografoService {
 
   }
 
+  upDateFotografo(formValues, pId) {
+    formValues.id = pId;
+    return this.httpClient.put(this.baseUrl, formValues).toPromise();
+  }
+
 
 }

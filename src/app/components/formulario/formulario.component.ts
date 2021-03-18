@@ -87,7 +87,7 @@ export class FormularioComponent implements OnInit {
   }
 
   async onSubmit() {
-    console.log('HOLA!!');
+
 
     console.log(this.formulario.value)
 
