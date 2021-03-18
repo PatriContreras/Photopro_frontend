@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cliente } from '../interfaces/cliente';
 
@@ -7,8 +8,11 @@ import { Cliente } from '../interfaces/cliente';
 export class UsuarioService {
 
   clientes: Cliente[];
+  baseUrl: string;
+  constructor(private httpClient: HttpClient) {
 
-  constructor() {
+    this.baseUrl = 'http://localhost:3000/api/clientes';
+
     this.clientes = [
       {
         nombre: 'Carmen',

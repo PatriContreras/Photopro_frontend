@@ -21,6 +21,7 @@ import { FavoritosComponent } from './components/perfil-cliente/favoritos/favori
 import { ReservasComponent } from './components/perfil-cliente/reservas/reservas.component';
 import { ContactoComponent } from './components/perfil-fotografo/contacto/contacto.component';
 import { DisponibilidadComponent } from './components/perfil-fotografo/disponibilidad/disponibilidad.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -50,7 +51,8 @@ import { DisponibilidadComponent } from './components/perfil-fotografo/disponibi
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { debounceTime } from 'rxjs/operators'
+import { FotografoService } from 'src/app/servicios/fotografo.service';
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -11,7 +12,7 @@ export class FormularioComponent implements OnInit {
 
   formulario: FormGroup
 
-  constructor() {
+  constructor(private fotografoService: FotografoService) {
 
     this.formulario = new FormGroup({
 
