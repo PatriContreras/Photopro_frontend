@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { debounceTime } from 'rxjs/operators'
 import { FotografoService } from 'src/app/servicios/fotografo.service';
@@ -12,7 +13,11 @@ export class FormularioComponent implements OnInit {
 
   formulario: FormGroup
 
-  constructor(private fotografoService: FotografoService) {
+  constructor(
+    private fotografoService: FotografoService,
+    private router: Router
+
+  ) {
 
     this.formulario = new FormGroup({
 
@@ -81,8 +86,17 @@ export class FormularioComponent implements OnInit {
 
   }
 
-  onSubmit() {
+  async onSubmit() {
+    console.log('HOLA!!');
+
     console.log(this.formulario.value)
+
+    const response = await this.fotografoService.insert(this.formulario.value)
+    console.log(response);
+    this.router.navigate(['/fotografo', response.insertId])
+
+
+
   }
 
 }

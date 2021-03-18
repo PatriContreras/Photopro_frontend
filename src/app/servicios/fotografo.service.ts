@@ -13,7 +13,7 @@ export class FotografoService {
 
   constructor(private httpClient: HttpClient) {
 
-    this.baseUrl = 'http://localhost:3000/api/fotografos';
+    this.baseUrl = 'http://localhost:3000/fotografos';
 
     this.fotografos = [
       {
@@ -41,6 +41,9 @@ export class FotografoService {
     ]
   }
 
+  insert(formValues): Promise<any> {
+    return this.httpClient.post(this.baseUrl, formValues).toPromise();
+  }
 
 
 
