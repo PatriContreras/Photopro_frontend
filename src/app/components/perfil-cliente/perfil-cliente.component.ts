@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilClienteComponent implements OnInit {
 
+  idCliente: Number;
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

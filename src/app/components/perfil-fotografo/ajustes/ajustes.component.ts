@@ -130,7 +130,7 @@ export class AjustesComponent implements OnInit {
       console.log(params);
 
 
-      const response = await this.fotografoService.upDateFotografo(this.formulario.value, params.fotografoId)
+      const response = await this.fotografoService.upDateFotografo(this.formulario.value, params.clienteId)
       console.log(response);
 
     })
