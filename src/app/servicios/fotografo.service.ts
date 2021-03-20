@@ -16,30 +16,7 @@ export class FotografoService {
 
     this.baseUrl = 'http://localhost:3000/fotografos';
 
-    this.fotografos = [
-      {
-
-        nombre: 'Pedro',
-        apellidos: 'Galan Martinez',
-        direccion: 'Calle Atocha 43',
-        email: 'pedro@gmail.com',
-        password: 'holapedro'
-      },
-      {
-        nombre: 'Ana',
-        apellidos: 'Lopez Garcia',
-        direccion: 'Calle princesa 5',
-        email: 'ana@gmail.com',
-        password: 'holaana'
-      },
-      {
-        nombre: 'Carla',
-        apellidos: 'Benito Carrera',
-        direccion: 'Calle moncloa 74',
-        email: 'carla@gmail.com',
-        password: 'holacarla'
-      },
-    ]
+    this.fotografos = []
   }
 
   insert(formValues): Promise<any> {
@@ -58,6 +35,7 @@ export class FotografoService {
 
   getAllFotografos(): Promise<any> {
     return this.httpClient.get(this.baseUrl).toPromise();
+
   }
 
 

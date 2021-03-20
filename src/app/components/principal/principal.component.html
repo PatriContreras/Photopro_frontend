@@ -83,10 +83,21 @@
 
     <section>
         <div class="principal">
-            <div class="fotografo" *ngFor="let fotografo of arrFotografos">
-                <p>{{fotografo.nombre}}</p>
+            <div class="fotografo col-6 col-md-4 col-lg-3" *ngFor="let fotografo of arrFotografos"
+                [routerLink]="['/fotografo', fotografo.id]">
+                <div>
+                    <p class="nombre">{{fotografo.nombre}} {{fotografo.apellidos}}</p>
+                    <i class="far fa-eye"></i>
+                    <p> Madrid </p>
+                </div>
 
+
+                <figure>
+                    <img src="https://www.dzoom.org.es/wp-content/uploads/2007/02/canon-mejorar-fotografo-consejos-principiantes-novatos-810x540.jpg"
+                        alt="">
+                </figure>
             </div>
+
         </div>
     </section>
 </main>
