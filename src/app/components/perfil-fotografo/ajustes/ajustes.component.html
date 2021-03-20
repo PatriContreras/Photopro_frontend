@@ -1,1 +1,73 @@
-<p>ajustes works!</p>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <h1 class="form-titulo">Registro</h1>
+
+    <div class="form-group">
+        <label for="">Nombre</label>
+        <input type="text" id="" class="form-control" formControlName="nombre">
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="">Apellidos</label>
+        <input type="text" id="" class="form-control" formControlName="apellidos">
+
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="">Dirección</label>
+        <input type="text" id="" class="form-control" formControlName="direccion">
+
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" id="" class="form-control" formControlName="email">
+
+
+    </div>
+
+
+
+    <div class="form-group">
+        <label for="">Contraseña</label>
+        <input type="password" id="" class="form-control" formControlName="password">
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="">Repite la contraseña</label>
+        <input type="password" id="" class="form-control" formControlName="password_2">
+
+    </div>
+
+
+
+    <div class="enviar">
+        <input type="submit" value="Enviar" class="btn btn-info btn-block">
+    </div>
+
+
+</form>
+
+
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="../../../assets/images/formulario/2.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="../../../assets/images/formulario/3.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="../../../assets/images/formulario/4.jpg" alt="Third slide">
+        </div>
+    </div>
+</div>

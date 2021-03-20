@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
+import { FotografoService } from 'src/app/servicios/fotografo.service';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 
 @Component({
   selector: 'app-formulario-cliente',
@@ -11,7 +14,10 @@ export class FormularioClienteComponent implements OnInit {
 
   formulario: FormGroup
 
-  constructor() {
+  constructor(
+    private usuarioService: UsuarioService,
+    private router: Router) {
+
     this.formulario = new FormGroup({
       nombre: new FormControl('', [
 
@@ -35,6 +41,11 @@ export class FormularioClienteComponent implements OnInit {
           Validators.maxLength(20)
 
         ]),
+      direccion: new FormControl('', [
+        Validators.required
+
+
+      ]),
 
       password: new FormControl('', [
         Validators.required,
@@ -52,6 +63,8 @@ export class FormularioClienteComponent implements OnInit {
     emailControl.valueChanges.pipe(debounceTime(2000)).subscribe((value) => {
       console.log(value)
     })
+
+
   }
 
 
@@ -74,7 +87,14 @@ export class FormularioClienteComponent implements OnInit {
 
   }
 
-  onSubmit() {
+  async onSubmit() {
+
     console.log(this.formulario.value)
+
+    const response = await this.usuarioService.create(this.formulario.value)
+    console.log(response);
+    this.router.navigate(['/cliente', response.insertId])
   }
+
+
 }
