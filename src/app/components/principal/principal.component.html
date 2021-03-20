@@ -80,4 +80,13 @@
         <h1 class="title"> Photopro </h1>
         <a [routerLink]="['/login']"><i class="fas fa-user"></i>Log In</a>
     </nav>
+
+    <section>
+        <div class="principal">
+            <div class="fotografo" *ngFor="let fotografo of arrFotografos">
+                <p>{{fotografo.nombre}}</p>
+
+            </div>
+        </div>
+    </section>
 </main>

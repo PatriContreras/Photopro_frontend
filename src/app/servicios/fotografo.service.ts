@@ -47,13 +47,17 @@ export class FotografoService {
   }
 
   fotografoById(pId): Promise<any> {
-    return this.httpClient.get(`${this.baseUrl}/${pId}`).toPromise()
+    return this.httpClient.get(`${this.baseUrl}/${pId}`).toPromise();
 
   }
 
   upDateFotografo(formValues, pId) {
     formValues.id = pId;
     return this.httpClient.put(this.baseUrl, formValues).toPromise();
+  }
+
+  getAllFotografos(): Promise<any> {
+    return this.httpClient.get(this.baseUrl).toPromise();
   }
 
 
