@@ -1,0 +1,46 @@
+@import 'variables';
+.container{
+
+
+position: relative;
+width: 40%;
+background-color: rgb(255, 255, 255, 0.9);
+padding: 25px;
+margin-top: 20%;
+margin-left: 30%;
+font-family: $secondTitle;
+border-radius: 0.5%;
+
+   
+
+
+}
+.tabla{
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+
+}
+
+.carousel{
+
+    background-size: cover;
+   
+    width: 100%;
+    opacity: 0.5;
+    
+    position: absolute;
+     top:-50px;
+      
+     
+    opacity: 0.7;
+    z-index: -2;
+    
+        img{
+          height: 1000px;
+        }
+  }
+  

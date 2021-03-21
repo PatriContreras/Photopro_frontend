@@ -5,6 +5,7 @@ import { FormularioClienteComponent } from './components/formulario-cliente/form
 
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { HomeComponent } from './components/home/home.component';
+import { MenuAjustesComponent } from './components/menu-ajustes/menu-ajustes.component';
 import { DatosPersonalesComponent } from './components/perfil-cliente/datos-personales/datos-personales.component';
 import { FavoritosComponent } from './components/perfil-cliente/favoritos/favoritos.component';
 import { PerfilClienteComponent } from './components/perfil-cliente/perfil-cliente.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'registro_fotografo', component: FormularioComponent },
   { path: 'login', component: AccesoComponent },
   { path: 'registro_cliente', component: FormularioClienteComponent },
-  { path: 'fotografo/:fotografoId/ajustes', component: AjustesComponent },
+  { path: 'fotografo/:fotografoId/menuajustes/ajustes', component: AjustesComponent },
+  { path: 'fotografo/:fotografoId/menuajustes', component: MenuAjustesComponent },
   { path: 'cliente', component: PerfilClienteComponent },
   {
     path: 'fotografo/:fotografoId', component: PerfilFotografoComponent,
