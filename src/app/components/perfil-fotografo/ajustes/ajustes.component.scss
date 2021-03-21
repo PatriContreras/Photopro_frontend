@@ -1,0 +1,69 @@
+@import 'variables';
+
+.fondito{
+    background-image: url('../../../../assets/images/perfil-fotografo/foto\ 8.jpg');
+    background-size: cover;
+    height:100%;
+
+    width:100%;
+    opacity: 0.5;
+    
+    position: absolute;
+    top:-50px;
+     
+      
+     
+    opacity: 0.7;
+    z-index: -2;
+    
+     
+    
+}
+form{
+    
+    
+    
+    position: relative;
+    width: 40%;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 25px;
+    margin-top: 3%;
+    margin-left: 35%;
+    font-family:$secondTitle;
+    border: grey solid 0.1px;
+   
+      .btn{
+          background-color:#353c3f;
+          border:none;
+          width: 30%;
+      }
+    
+  
+      
+  
+
+}
+form .form-group{
+    font-family: $secondTitle;
+
+    font-family: $colorTerciario;
+}
+
+h1 {
+    width: 100%;
+    background-color:#353c3f;
+    color: white;
+    font-size: 25px;
+    justify-content: center;
+    font-weight: 200px;
+    text-align: center;
+    font-family: $secondTitle;
+
+
+
+
+}
+
+
+  
+  

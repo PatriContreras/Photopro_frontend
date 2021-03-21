@@ -1,0 +1,19 @@
+@import 'variables';
+
+.container{
+    text-align: center;
+    
+    height: 600px;
+    width: 80%;
+    font-family:$secondTitle ;
+
+
+
+}
+
+.contenedor{
+    border:  solid grey 0.1px ;
+    height: 400px;
+    width: 100%;
+    border-radius: 0.5%;
+}
