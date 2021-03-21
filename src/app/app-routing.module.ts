@@ -50,7 +50,6 @@ const routes: Routes = [
 
     ]
   },
-  // { path: 'cliente', component: PerfilClienteComponent },
   { path: 'cliente/:clienteId', component: PerfilClienteComponent },
   { path: 'cliente/:clienteId/favoritos', component: FavoritosComponent },
   { path: 'cliente/:clienteId/reservas', component: ReservasComponent },

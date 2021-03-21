@@ -13,29 +13,7 @@ export class UsuarioService {
 
     this.baseUrl = 'http://localhost:3000/clientes';
 
-    this.clientes = [
-      {
-        nombre: 'Carmen',
-        apellidos: 'Perales Haro',
-        direccion: 'Calle costa rica 58',
-        email: 'carmen@gmail.com',
-        password: 'holacarmen'
-      },
-      {
-        nombre: 'Alvaro',
-        apellidos: 'Gomez Carrasco',
-        direccion: 'Calle Alberto Alcocer 2',
-        email: 'alvaro@gmail.com',
-        password: 'holaalvaro'
-      },
-      {
-        nombre: 'Antonio',
-        apellidos: 'Hernandez Rey',
-        direccion: 'Calle hermosilla 7',
-        email: 'antonio@gmail.com',
-        password: 'holaantonio'
-      },
-    ]
+    this.clientes = []
 
   }
 
