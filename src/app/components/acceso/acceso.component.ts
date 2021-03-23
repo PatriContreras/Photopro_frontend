@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Fotografo } from 'src/app/interfaces/fotografo';
 import { FotografoService } from 'src/app/servicios/fotografo.service';
+
+declare var Swal;
 
 @Component({
   selector: 'app-acceso',
@@ -9,10 +13,14 @@ import { FotografoService } from 'src/app/servicios/fotografo.service';
 })
 export class AccesoComponent implements OnInit {
 
+  fotografo: Fotografo;
+  fotografoId: number;
   formulario: FormGroup;
   errorMessage: string;
 
-  constructor(private fotografoService: FotografoService) {
+  constructor(private fotografoService: FotografoService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {
 
     this.formulario = new FormGroup({
       email: new FormControl('', [
@@ -28,12 +36,37 @@ export class AccesoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(async params => {
+      console.log(params); // null
+
+      const fotografo = await this.fotografoService.fotografoById(params.fotografoId)
+
+      this.fotografo = params.fotografoId
+    })
+
   }
 
   onSubmit() {
-
-
-    //navigate
+    // this.errorMessage = null; // Para tener sensación de usuario de que está pulsando el botón
+    this.fotografoService.login(this.formulario.value)
+      .then(response => {
+        if (response.error) {
+          setTimeout(() => this.errorMessage = 'Mensaje de error', 300)
+        } else {
+          localStorage.setItem('token_fotografo', response.token);
+          Swal.fire(
+            'Login Correcto!',
+            'Acceso permitido!',
+            'success')
+            .then(result => {
+              this.router.navigate(['/fotografo', response.id]);
+            });
+          this.errorMessage = null;
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }
 
 }

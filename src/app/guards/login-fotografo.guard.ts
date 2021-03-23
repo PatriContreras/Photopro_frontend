@@ -11,7 +11,7 @@ export class LoginFotografoGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (localStorage.getItem('')) {
+    if (localStorage.getItem('token_fotografo')) {
       return true
     } else {
       this.router.navigate(['/login'])

@@ -94,7 +94,7 @@ export class AjustesComponent implements OnInit {
 
         ]),
 
-        password: new FormControl('', [
+        password: new FormControl([
 
         ]),
 
@@ -132,13 +132,14 @@ export class AjustesComponent implements OnInit {
       console.log(params);
 
 
-      const response = await this.fotografoService.upDateFotografo(this.formulario.value, params.clienteId)
+      const response = await this.fotografoService.upDateFotografo(this.formulario.value, params.fotografoId)
       console.log(response);
 
+      this.router.navigate(['/fotografo', params.fotografoId])
     })
 
 
-    // this.router.navigate(['/fotografo', response.insertId])
+
 
 
 

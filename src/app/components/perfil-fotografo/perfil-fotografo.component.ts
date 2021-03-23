@@ -20,10 +20,6 @@ export class PerfilFotografoComponent implements OnInit {
 
   ) {
 
-
-
-
-
   }
 
   ngOnInit() {
