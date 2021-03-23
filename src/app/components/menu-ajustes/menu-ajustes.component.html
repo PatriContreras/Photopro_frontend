@@ -3,17 +3,15 @@
     <div class="tabla">
         <a [routerLink]="['/fotografo',idfotografo,'menuajustes','ajustes']">Datos personales</a>
     </div>
-    <div class="tabla">
-        <a href="">Privacidad</a>
-    </div>
+
     <div class="tabla">
         <a href="">Perfil</a>
     </div>
     <div class="tabla">
-        <a href=""></a>
+        <a href="">Salir</a>
     </div>
     <div class="tabla">
-        <a href="">Salir</a>
+        <a [routerLink]="['/']" (click)="onClick()">Eliminar cuenta</a>
     </div>
 </div>
 

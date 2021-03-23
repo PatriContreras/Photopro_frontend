@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { promise } from 'selenium-webdriver';
 import { Fotografo } from '../interfaces/fotografo';
@@ -11,10 +11,13 @@ export class FotografoService {
   fotografos: Fotografo[];
 
   baseUrl: string;
+  privateUrl: string;
 
   constructor(private httpClient: HttpClient) {
 
-    this.baseUrl = 'http://localhost:3000/fotografos';
+    this.baseUrl = 'http://localhost:3000/api/fotografos';
+    this.privateUrl = 'http://localhost:3000/api/fotografos/private'
+
 
     this.fotografos = []
   }
@@ -30,7 +33,12 @@ export class FotografoService {
 
   upDateFotografo(formValues, pId) {
     formValues.id = pId;
-    return this.httpClient.put(this.baseUrl, formValues).toPromise();
+    return this.httpClient.put(this.privateUrl, formValues, this.createHeaders()).toPromise();
+  }
+
+  deleteFotografo(pId): Promise<any> {
+    return this.httpClient.delete(`${this.privateUrl}/${pId}`, this.createHeaders()).toPromise();
+
   }
 
   getAllFotografos(): Promise<any> {
@@ -38,9 +46,16 @@ export class FotografoService {
 
   }
 
-  /*  login (formValues): Promise<any>{
-     return this.httpClient.post(`${this.baseUrl}/)
-   } */
+  login(formValues): Promise<any> {
+    return this.httpClient.post(`${this.baseUrl}/login_fotografo`, formValues).toPromise();
+  }
 
+  createHeaders() {
+    return {
+      headers: new HttpHeaders({
+        'authorization': localStorage.getItem('token_fotografo')
+      })
+    }
+  }
 
 }

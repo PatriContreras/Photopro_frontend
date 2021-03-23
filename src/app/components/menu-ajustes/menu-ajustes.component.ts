@@ -25,6 +25,22 @@ export class MenuAjustesComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.idfotografo = params.fotografoId;
+      //console.log(this.idfotografo);
+
+
+    })
+  }
+
+
+  async onClick() {
+
+    this.activatedRoute.params.subscribe(async params => {
+      console.log('estas en onclick params', params);
+
+      const response = await this.fotografoService.deleteFotografo(params.fotografoId)
+      console.log('estas en response de delete', response);
+
+
 
     })
   }

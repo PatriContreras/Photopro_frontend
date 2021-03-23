@@ -58,30 +58,73 @@ export class DatosPersonalesComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.activatedRoute.params.subscribe(async params => {
+
+      const cliente = await this.usuarioService.clienteById(params.clienteId)
+      console.log('Cliente en NgOnInit', cliente);
+
+      this.formulario = new FormGroup({
+
+        nombre: new FormControl(cliente.nombre, [
+
+        ]),
+
+        apellidos: new FormControl(cliente.apellidos, [
+
+
+        ]),
+
+        email: new FormControl(cliente.email, [
+
+        ]),
+
+        telefono: new FormControl(cliente.telefono,
+          [
+
+
+          ]),
+        direccion: new FormControl(cliente.direccion, [
+
+
+
+        ]),
+
+        password: new FormControl('', [
+
+        ]),
+
+        password_2: new FormControl()
+      })
+
+    })
 
 
   }
+
+
   async onSubmit() {
     console.log(this.formulario.value);
 
 
     this.activatedRoute.params.subscribe(async params => {
-      console.log(params);
+      console.log('params en OnSubmit', params);
 
 
       const response = await this.usuarioService.upDateCliente(this.formulario.value, params.clienteId)
-      console.log(response);
+      console.log('update', response);
 
     })
 
 
     // this.router.navigate(['/fotografo', response.insertId])
 
-
-
   }
 
 
 }
+
+
+
+
 
 
