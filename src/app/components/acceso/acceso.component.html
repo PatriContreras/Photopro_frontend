@@ -12,7 +12,8 @@
         </div>
 
         <div class="enviar">
-            <input type="submit" value="Enviar" class="btn btn-info btn-block" [disabled]="formulario.valid">
+            <input type="submit" value="Enviar" class="btn btn-info btn-block">
+            <p *ngIf="errorMessage">{{errorMessage}}</p>
         </div>
     </form>
 </div>

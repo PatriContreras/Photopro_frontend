@@ -20,7 +20,7 @@ export class PerfilFotografoComponent implements OnInit {
 
   ) {
 
-    this.idFotografo = 2;
+
 
 
 

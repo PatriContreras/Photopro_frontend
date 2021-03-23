@@ -15,6 +15,7 @@ export class AjustesComponent implements OnInit {
 
   fotografo: Fotografo;
   formulario: FormGroup;
+
   idFotografo: Number;
 
   constructor(

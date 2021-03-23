@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FotografoService } from 'src/app/servicios/fotografo.service';
 
 @Component({
   selector: 'app-acceso',
@@ -8,9 +9,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AccesoComponent implements OnInit {
 
-  formulario: FormGroup
+  formulario: FormGroup;
+  errorMessage: string;
 
-  constructor() {
+  constructor(private fotografoService: FotografoService) {
+
     this.formulario = new FormGroup({
       email: new FormControl('', [
         Validators.required,
@@ -28,6 +31,8 @@ export class AccesoComponent implements OnInit {
   }
 
   onSubmit() {
+
+
     //navigate
   }
 
