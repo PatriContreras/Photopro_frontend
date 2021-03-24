@@ -7,7 +7,7 @@
                 <a href=""><img src="" alt=""></a>
             </div>
 
-            <h1>{{fotografo.nombre}} {{fotografo.apellidos}}</h1>
+            <h1>{{fotografo?.nombre}} {{fotografo?.apellidos}}</h1>
 
             <div class="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <a [routerLink]="['/fotografo', fotografo.id, 'menuajustes']"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        <a [routerLink]="['/fotografo', fotografo?.id, 'menuajustes']"><i class="fa fa-cog" aria-hidden="true"></i></a>
 
 
 

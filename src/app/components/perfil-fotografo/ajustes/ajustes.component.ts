@@ -61,47 +61,47 @@ export class AjustesComponent implements OnInit {
 
 
 
-  ngOnInit() {
-
-    this.activatedRoute.params.subscribe(async params => {
-
-      const fotografo = await this.fotografoService.fotografoById(params.fotografoId)
-      console.log('ajustes', fotografo);
-
-      this.formulario = new FormGroup({
-
-        nombre: new FormControl(this.fotografo.nombre, [
-
-        ]),
-
-        apellidos: new FormControl(this.fotografo.apellidos, [
+  async ngOnInit() {
 
 
-        ]),
 
-        email: new FormControl(this.fotografo.email, [
+    const fotografo = await this.fotografoService.fotografoById()
+    console.log('ajustes', fotografo);
 
-        ]),
+    this.formulario = new FormGroup({
 
-        // telefono: new FormControl(this.fotografo.telefono,
-        //   [
+      nombre: new FormControl(fotografo.nombre, [
+
+      ]),
+
+      apellidos: new FormControl(fotografo.apellidos, [
 
 
-        //   ]),
-        direccion: new FormControl(this.fotografo.direccion, [
+      ]),
 
+      email: new FormControl(fotografo.email, [
+
+      ]),
+
+      telefono: new FormControl(fotografo.telefono,
+        [
 
 
         ]),
+      direccion: new FormControl(fotografo.direccion, [
 
-        password: new FormControl([
 
-        ]),
 
-        password_2: new FormControl()
-      })
+      ]),
 
+      password: new FormControl([
+
+      ]),
+
+      password_2: new FormControl()
     })
+
+
 
 
   }
@@ -125,18 +125,17 @@ export class AjustesComponent implements OnInit {
   // }
 
   async onSubmit() {
-    console.log(this.formulario.value);
 
 
-    this.activatedRoute.params.subscribe(async params => {
-      console.log(params);
 
 
-      const response = await this.fotografoService.upDateFotografo(this.formulario.value, params.fotografoId)
-      console.log('fotografo-ajustes', response);
 
-      this.router.navigate(['/fotografo', params.fotografoId])
-    })
+
+    const response = await this.fotografoService.upDateFotografo(this.formulario.value)
+    console.log('fotografo-ajustes', response);
+
+    this.router.navigate(['/fotografo'])
+
 
 
 

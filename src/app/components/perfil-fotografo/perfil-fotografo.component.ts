@@ -22,14 +22,14 @@ export class PerfilFotografoComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  async ngOnInit() {
 
-    this.activatedRoute.params.subscribe(async params => {
 
-      this.fotografo = await this.fotografoService.fotografoById(params.fotografoId);
-      console.log('fotografo perfilfot ngoninit', this.fotografo);
 
-    })
+    this.fotografo = await this.fotografoService.fotografoById();
+    console.log(this.fotografo);
+
+
 
   }
 
