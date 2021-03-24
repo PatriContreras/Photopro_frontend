@@ -70,25 +70,25 @@ export class AjustesComponent implements OnInit {
 
       this.formulario = new FormGroup({
 
-        nombre: new FormControl(fotografo.nombre, [
+        nombre: new FormControl(this.fotografo.nombre, [
 
         ]),
 
-        apellidos: new FormControl(fotografo.apellidos, [
+        apellidos: new FormControl(this.fotografo.apellidos, [
 
 
         ]),
 
-        email: new FormControl(fotografo.email, [
+        email: new FormControl(this.fotografo.email, [
 
         ]),
 
-        telefono: new FormControl(fotografo.telefono,
-          [
+        // telefono: new FormControl(this.fotografo.telefono,
+        //   [
 
 
-          ]),
-        direccion: new FormControl(fotografo.direccion, [
+        //   ]),
+        direccion: new FormControl(this.fotografo.direccion, [
 
 
 

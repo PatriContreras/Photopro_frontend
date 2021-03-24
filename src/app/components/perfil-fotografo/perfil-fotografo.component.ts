@@ -27,7 +27,7 @@ export class PerfilFotografoComponent implements OnInit {
     this.activatedRoute.params.subscribe(async params => {
 
       this.fotografo = await this.fotografoService.fotografoById(params.fotografoId);
-      console.log(this.fotografo);
+      console.log('fotografo perfilfot ngoninit', this.fotografo);
 
     })
 
