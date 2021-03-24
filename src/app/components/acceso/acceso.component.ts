@@ -35,14 +35,13 @@ export class AccesoComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.activatedRoute.params.subscribe(async params => {
-      console.log(params); // null
+  async ngOnInit() {
 
-      const fotografo = await this.fotografoService.fotografoById(params.fotografoId)
 
-      this.fotografo = params.fotografoId
-    })
+    const fotografo = await this.fotografoService.fotografoById()
+
+
+
 
   }
 
