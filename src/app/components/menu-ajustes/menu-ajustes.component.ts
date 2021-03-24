@@ -34,15 +34,14 @@ export class MenuAjustesComponent implements OnInit {
 
   async onClick() {
 
-    this.activatedRoute.params.subscribe(async params => {
-      console.log('estas en onclick params', params);
-
-      const response = await this.fotografoService.deleteFotografo(params.fotografoId)
-      console.log('estas en response de delete', response);
 
 
+    const response = await this.fotografoService.deleteFotografo()
+    console.log('estas en response de delete', response);
 
-    })
   }
 
+
 }
+
+

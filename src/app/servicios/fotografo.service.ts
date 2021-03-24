@@ -36,8 +36,8 @@ export class FotografoService {
     return this.httpClient.put(this.privateUrl, formValues, this.createHeaders()).toPromise();
   }
 
-  deleteFotografo(pId): Promise<any> {
-    return this.httpClient.delete(`${this.privateUrl}/${pId}`, this.createHeaders()).toPromise();
+  deleteFotografo(): Promise<any> {
+    return this.httpClient.delete(`${this.privateUrl}`, this.createHeaders()).toPromise();
 
   }
 
