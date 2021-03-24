@@ -12,7 +12,7 @@ export class UsuarioService {
   privateUrl: string;
   constructor(private httpClient: HttpClient) {
 
-    this.baseUrl = 'http://localhost:3000/clientes';
+    this.baseUrl = 'http://localhost:3000/api/clientes';
     this.privateUrl = 'http://localhost:3000/api/clientes/private';
 
     this.clientes = []
@@ -24,18 +24,18 @@ export class UsuarioService {
     return this.httpClient.post(this.baseUrl, formValues).toPromise();
   }
 
-  clienteById(pId): Promise<any> {
-    return this.httpClient.get(`${this.privateUrl}/${pId}`, this.createHeaders()).toPromise()
+  clienteById(): Promise<any> {
+    return this.httpClient.get(`${this.privateUrl}/perfil`, this.createHeaders()).toPromise()
 
   }
 
-  upDateCliente(formValues, pId) {
-    formValues.id = pId;
+  upDateCliente(formValues) {
+
     return this.httpClient.put(this.privateUrl, formValues, this.createHeaders()).toPromise();
   }
 
-  deleteCliente(pId): Promise<any> {
-    return this.httpClient.delete(`${this.privateUrl}/${pId}`, this.createHeaders()).toPromise();
+  deleteCliente(): Promise<any> {
+    return this.httpClient.delete(`${this.privateUrl}`, this.createHeaders()).toPromise();
 
   }
   login(formValues): Promise<any> {

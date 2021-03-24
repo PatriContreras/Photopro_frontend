@@ -18,14 +18,23 @@ export class PerfilClienteComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private clienteService: UsuarioService) { }
 
-  ngOnInit() {
-    this.activatedRoute.params.subscribe(async params => {
-      console.log('params', params)
+  async ngOnInit() {
 
-      this.cliente = await this.clienteService.clienteById(params.clienteId)
-      console.log('cliente oni', this.cliente);
 
-    });
+    this.cliente = await this.clienteService.clienteById();
+    console.log(this.cliente);
+
+
+
+
+  }
+  async onClick() {
+
+
+
+    const response = await this.clienteService.deleteCliente()
+    console.log('estas en response de delete', response);
+
   }
 }
 
