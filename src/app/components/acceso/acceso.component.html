@@ -13,8 +13,19 @@
 
         <div class="enviar">
             <input type="submit" value="Enviar" class="btn btn-info btn-block">
-            <p *ngIf="errorMessage">{{errorMessage}}</p>
+            <p *ngIf="errorMessage"> *Usuario y/o contraseña incorrectos</p>
         </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="registro" id="inlineRadio1" value="opcionCliente"
+                formControlName="registro">
+            <label class="form-check-label" for="inlineRadio1">Busco fotografo</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="registro" id="inlineRadio2" value="opcionFotografo"
+                formControlName="registro">
+            <label class="form-check-label" for="inlineRadio2">Soy fotografo</label>
+        </div>
+
     </form>
 </div>
 

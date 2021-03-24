@@ -18,6 +18,7 @@ import { OpinionesComponent } from './components/perfil-fotografo/opiniones/opin
 import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-fotografo.component';
 import { PortfolioComponent } from './components/perfil-fotografo/portfolio/portfolio.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { LoginClienteGuard } from './guards/login-cliente.guard';
 import { LoginFotografoGuard } from './guards/login-fotografo.guard';
 
 
@@ -53,7 +54,7 @@ const routes: Routes = [
 
     ]
   },
-  { path: 'cliente/:clienteId', component: PerfilClienteComponent },
+  { path: 'cliente/perfil', component: PerfilClienteComponent, canActivate: [LoginClienteGuard] },
   { path: 'cliente/:clienteId/favoritos', component: FavoritosComponent },
   { path: 'cliente/:clienteId/reservas', component: ReservasComponent },
   { path: 'cliente/:clienteId/datos-personales', component: DatosPersonalesComponent },
