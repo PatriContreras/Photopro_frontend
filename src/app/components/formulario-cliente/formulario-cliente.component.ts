@@ -82,7 +82,7 @@ export class FormularioClienteComponent implements OnInit {
   }
   checkValidator(controlName, validatorName) {
     return this.formulario.get(controlName).hasError(validatorName) && this.formulario.get(controlName).touched;
-    //pa que era
+
 
 
   }
@@ -92,8 +92,8 @@ export class FormularioClienteComponent implements OnInit {
     console.log(this.formulario.value)
 
     const response = await this.usuarioService.create(this.formulario.value)
-    console.log(response);
-    this.router.navigate(['/cliente', response.insertId])
+    console.log('formulario cliente', response);
+    this.router.navigate(['/cliente/:clienteId', response.insertId])
   }
 
 

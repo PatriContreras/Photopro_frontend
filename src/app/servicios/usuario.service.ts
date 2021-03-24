@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cliente } from '../interfaces/cliente';
 
@@ -9,9 +9,11 @@ export class UsuarioService {
 
   clientes: Cliente[];
   baseUrl: string;
+  privateUrl: string;
   constructor(private httpClient: HttpClient) {
 
     this.baseUrl = 'http://localhost:3000/clientes';
+    this.privateUrl = 'http://localhost:3000/api/clientes/private';
 
     this.clientes = []
 
@@ -23,14 +25,31 @@ export class UsuarioService {
   }
 
   clienteById(pId): Promise<any> {
-    return this.httpClient.get(`${this.baseUrl}/${pId}`).toPromise()
+    return this.httpClient.get(`${this.privateUrl}/${pId}`, this.createHeaders()).toPromise()
 
   }
 
   upDateCliente(formValues, pId) {
     formValues.id = pId;
-    return this.httpClient.put(this.baseUrl, formValues).toPromise();
+    return this.httpClient.put(this.privateUrl, formValues, this.createHeaders()).toPromise();
   }
+
+  deleteCliente(pId): Promise<any> {
+    return this.httpClient.delete(`${this.privateUrl}/${pId}`, this.createHeaders()).toPromise();
+
+  }
+  login(formValues): Promise<any> {
+    return this.httpClient.post(`${this.baseUrl}/login_cliente`, formValues).toPromise();
+  }
+
+  createHeaders() {
+    return {
+      headers: new HttpHeaders({
+        'authorization': localStorage.getItem('token_fotografo')
+      })
+    }
+  }
+
 
 
 }

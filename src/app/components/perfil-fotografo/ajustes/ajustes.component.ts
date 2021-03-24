@@ -66,7 +66,7 @@ export class AjustesComponent implements OnInit {
     this.activatedRoute.params.subscribe(async params => {
 
       const fotografo = await this.fotografoService.fotografoById(params.fotografoId)
-      console.log(fotografo);
+      console.log('ajustes', fotografo);
 
       this.formulario = new FormGroup({
 
@@ -133,7 +133,7 @@ export class AjustesComponent implements OnInit {
 
 
       const response = await this.fotografoService.upDateFotografo(this.formulario.value, params.fotografoId)
-      console.log(response);
+      console.log('fotografo-ajustes', response);
 
       this.router.navigate(['/fotografo', params.fotografoId])
     })
