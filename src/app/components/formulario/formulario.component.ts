@@ -93,7 +93,7 @@ export class FormularioComponent implements OnInit {
 
     const response = await this.fotografoService.insert(this.formulario.value)
     console.log(response);
-    this.router.navigate(['/fotografo', response.insertId])
+    this.router.navigate(['/fotografo'])
 
 
 

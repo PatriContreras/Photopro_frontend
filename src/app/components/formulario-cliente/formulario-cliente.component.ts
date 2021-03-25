@@ -93,7 +93,7 @@ export class FormularioClienteComponent implements OnInit {
 
     const response = await this.usuarioService.create(this.formulario.value)
     console.log('formulario cliente', response);
-    this.router.navigate(['/cliente/:clienteId', response.insertId])
+    this.router.navigate(['/login'])
   }
 
 

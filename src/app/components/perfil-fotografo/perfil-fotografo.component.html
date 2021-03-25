@@ -23,20 +23,17 @@
 
         <div class="botonera">
             <div class="btn-group btn-group-justified">
-                <button [routerLink]="['/fotografo', idFotografo, 'portfolio']" type="button"
+                <button [routerLink]="['/fotografo/portfolio']" type="button"
                     class="btn btn-secondary">Portfolio</button>
-                <button [routerLink]="['/fotografo', idFotografo, 'bio']" type="button"
-                    class="btn btn-secondary">Bio</button>
-                <button [routerLink]="['/fotografo', idFotografo, 'opiniones']" type="button"
-                    class="btn btn-secondary">Reseñas</button>
-                <button [routerLink]="['/fotografo', idFotografo, 'contacto']" type="button"
-                    class="btn btn-secondary">Contacto</button>
-                <button [routerLink]="['/fotografo', idFotografo, 'disponibilidad']" type="button"
+                <button [routerLink]="['/fotografo/bio']" type="button" class="btn btn-secondary">Bio</button>
+                <button [routerLink]="['/fotografo/opiniones']" type="button" class="btn btn-secondary">Reseñas</button>
+                <button [routerLink]="['/fotografo/contacto']" type="button" class="btn btn-secondary">Contacto</button>
+                <button [routerLink]="['/fotografo/disponibilidad']" type="button"
                     class="btn btn-secondary">Disponibilidad</button>
             </div>
         </div>
 
-        <a [routerLink]="['/fotografo', fotografo?.id, 'menuajustes']"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        <a [routerLink]="['/fotografo/menuajustes']"><i class="fa fa-cog" aria-hidden="true"></i></a>
 
 
 

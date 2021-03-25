@@ -5,23 +5,23 @@
     <div class="perfil-cliente">
 
         <div class="bienvenida">
-            <p>¡Bienvenid@ a tu cuenta!</p>
+            <p>¡Bienvenid@ {{cliente?.nombre}}!</p>
         </div>
 
         <div class="opciones">
-            <a [routerLink]="['/cliente', idCliente, 'datos-personales']">Tus datos personales</a>
+            <a [routerLink]="['/cliente/datos-personales']">Tus datos personales</a>
         </div>
         <div class="opciones">
-            <a [routerLink]="['/favoritos']">Tus fotógrafos favoritos</a>
+            <a [routerLink]="['cliente/favoritos']">Tus fotógrafos favoritos</a>
         </div>
         <div class="opciones">
             <a href="">Tus reservas</a>
         </div>
         <div class="opciones">
-            <a [routerLink]="['/descubrir']">Salir</a>
+            <a [routerLink]="['cliente/descubrir']">Salir</a>
         </div>
         <div class="opciones">
-            <a [routerLink]="['/descubrir']" (click)="onClick()">Eliminar cuenta</a>
+            <a [routerLink]="['cliente/descubrir']" (click)="onClick()">Eliminar cuenta</a>
         </div>
 
     </div>

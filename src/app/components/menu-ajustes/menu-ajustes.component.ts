@@ -23,12 +23,12 @@ export class MenuAjustesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-      this.idfotografo = params.fotografoId;
-      //console.log(this.idfotografo);
+    // this.activatedRoute.params.subscribe(params => {
+    //   this.idfotografo = params.fotografoId;
+    //   //console.log(this.idfotografo);
 
 
-    })
+    // })
   }
 
 

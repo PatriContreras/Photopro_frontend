@@ -28,11 +28,11 @@ const routes: Routes = [
   { path: 'registro_fotografo', component: FormularioComponent },
   { path: 'login', component: AccesoComponent },
   { path: 'registro_cliente', component: FormularioClienteComponent },
-  { path: 'fotografo/:fotografoId/menuajustes/ajustes', component: AjustesComponent },
-  { path: 'fotografo/:fotografoId/menuajustes', component: MenuAjustesComponent },
-  { path: 'cliente', component: PerfilClienteComponent },
+  { path: 'fotografo/menuajustes/ajustes', component: AjustesComponent },
+  { path: 'fotografo/menuajustes', component: MenuAjustesComponent },
+  { path: 'cliente', component: PerfilClienteComponent, canActivate: [LoginClienteGuard] },
   {
-    path: 'fotografo/:fotografoId', component: PerfilFotografoComponent, canActivate: [LoginFotografoGuard],
+    path: 'fotografo', component: PerfilFotografoComponent, canActivate: [LoginFotografoGuard],
     children: [
       {
         path: 'opiniones', component: OpinionesComponent
@@ -54,12 +54,9 @@ const routes: Routes = [
 
     ]
   },
-  { path: 'cliente/perfil', component: PerfilClienteComponent, canActivate: [LoginClienteGuard] },
-  { path: 'cliente/:clienteId/favoritos', component: FavoritosComponent },
-  { path: 'cliente/:clienteId/reservas', component: ReservasComponent },
-  { path: 'cliente/:clienteId/datos-personales', component: DatosPersonalesComponent },
-
-  { path: 'fotografo', component: PerfilFotografoComponent },
+  { path: 'cliente/favoritos', component: FavoritosComponent },
+  { path: 'cliente/reservas', component: ReservasComponent },
+  { path: 'cliente/datos-personales', component: DatosPersonalesComponent },
   { path: 'descubrir', component: PrincipalComponent },
   { path: '**', redirectTo: '' }
 

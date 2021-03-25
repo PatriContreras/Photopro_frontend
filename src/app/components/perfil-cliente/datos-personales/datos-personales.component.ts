@@ -16,8 +16,7 @@ export class DatosPersonalesComponent implements OnInit {
 
   constructor(
     private usuarioService: UsuarioService,
-    private route: Router,
-    private activatedRoute: ActivatedRoute
+    private router: Router,
 
   ) {
 
@@ -93,7 +92,9 @@ export class DatosPersonalesComponent implements OnInit {
 
       ]),
 
-      password_2: new FormControl()
+      password_2: new FormControl('', [
+
+      ])
     })
 
 
@@ -105,17 +106,10 @@ export class DatosPersonalesComponent implements OnInit {
   async onSubmit() {
 
 
-
-
-
-
     const response = await this.usuarioService.upDateCliente(this.formulario.value)
     console.log('update', response);
 
-
-
-
-    // this.router.navigate(['/fotografo', response.insertId])
+    this.router.navigate(['/cliente'])
 
   }
 

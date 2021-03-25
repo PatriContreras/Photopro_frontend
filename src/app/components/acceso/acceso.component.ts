@@ -50,9 +50,6 @@ export class AccesoComponent implements OnInit {
 
     /* const fotografo = await this.fotografoService.fotografoById() */
 
-
-
-
   }
 
   onSubmit() {
@@ -80,10 +77,13 @@ export class AccesoComponent implements OnInit {
         .catch(error => {
           console.log(error);
         })
+
     } else {
 
       this.clienteService.login(this.formulario.value)
         .then(response => {
+          console.log(response);
+
           if (response.error) {
             setTimeout(() => this.errorMessage = 'Mensaje de error', 300)
           } else {
@@ -93,7 +93,7 @@ export class AccesoComponent implements OnInit {
               'Acceso permitido!',
               'success')
               .then(result => {
-                this.router.navigate(['/cliente/perfil']);
+                this.router.navigate(['/cliente']);
               });
             this.errorMessage = null;
           }
