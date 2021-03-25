@@ -4,5 +4,6 @@ export interface Fotografo {
     apellidos: string,
     direccion: string,
     email: string,
-    password: string
+    password: string,
+    categoria: string,
 }

@@ -1,8 +1,6 @@
 @import 'variables';
 
-form{
-    
-    
+form{ 
   position: relative;
   width: 40%;
   background-color: rgb(255, 255, 255, 0.9);
@@ -14,10 +12,7 @@ form{
     .btn{
         background-color:#587886;
         border:none;
-    }
-  
-
-    
+    }   
 }
 form .form-group{
     font-family: $secondTitle;
@@ -37,9 +32,10 @@ form .form-group{
     text-align: center;
     font-family: $secondTitle;
 
+}
 
-
-
+.filtros {
+  margin-bottom: 20px;
 }
 
 
