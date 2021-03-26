@@ -23,7 +23,8 @@ import { ContactoComponent } from './components/perfil-fotografo/contacto/contac
 import { DisponibilidadComponent } from './components/perfil-fotografo/disponibilidad/disponibilidad.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuAjustesComponent } from './components/menu-ajustes/menu-ajustes.component';
-import { NavbarComponent } from './components/navbar/navbar.component'
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 
 
@@ -48,7 +49,8 @@ import { NavbarComponent } from './components/navbar/navbar.component'
     ContactoComponent,
     DisponibilidadComponent,
     MenuAjustesComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
 
   ],
   imports: [
