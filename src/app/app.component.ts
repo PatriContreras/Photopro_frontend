@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,18 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'FrontEnd';
-  routing: Router;
 
   constructor(private router: Router) {
-    this.routing = router
-  }
+    // router.events.subscribe((val) => {
+    //   // see also 
 
+    //   if (val instanceof NavigationEnd) {
+    //     console.log(val);
+
+    //   }
+    // });
+  }
   ngOnInit() {
-    console.log(this.routing)
+
   }
 }
