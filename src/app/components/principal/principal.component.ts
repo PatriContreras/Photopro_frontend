@@ -15,9 +15,13 @@ export class PrincipalComponent implements OnInit {
   mainStyle: any;
   descubrirTexto: any;
   arrFotografos: Fotografo[];
+  filtros: any;
+
+
 
 
   constructor(private fotografoService: FotografoService) {
+    this.filtros = {}
     this.sideNavStyle = {
       width: 0,
     };
@@ -57,6 +61,21 @@ export class PrincipalComponent implements OnInit {
     this.descubrirTexto = {
 
     }
+
+  }
+
+  onChange($event) {
+    console.log($event.target);
+    this.filtros[$event.target.value] = $event.target.checked;
+    console.log(this.filtros);
+  }
+
+  async onClick() {
+
+    this.arrFotografos = await this.fotografoService.getByCategory(this.filtros)
+
+
+
 
   }
 

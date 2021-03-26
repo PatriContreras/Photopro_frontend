@@ -46,9 +46,15 @@ export class FotografoService {
 
   }
 
+  getByCategory(formValues): Promise<any> {
+    return this.httpClient.post(`${this.baseUrl}/filter`, formValues).toPromise()
+  }
+
   login(formValues): Promise<any> {
     return this.httpClient.post(`${this.baseUrl}/login_fotografo`, formValues).toPromise();
   }
+
+
 
   createHeaders() {
     return {

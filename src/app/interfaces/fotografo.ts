@@ -5,5 +5,16 @@ export interface Fotografo {
     direccion: string,
     email: string,
     password: string,
-    categoria: string,
+    bodas: boolean,
+    eventosnocturnos: boolean,
+    producto: boolean,
+    publicidad: boolean,
+    paisaje: boolean,
+    retrato: boolean,
+    modelos: boolean,
+    artistica: boolean,
+    documental: boolean,
+    deportes: boolean
+
+
 }
