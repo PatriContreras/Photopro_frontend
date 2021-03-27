@@ -1,11 +1,15 @@
 @import'variables';
 
+
+.container{
+   max-height: 20vh;
+}
 footer {
-    /* background-color: $colorPrimario; */
+    background-color: $colorPrimario;
     padding: 20px 0px;
     text-align: center;
     color: white;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }

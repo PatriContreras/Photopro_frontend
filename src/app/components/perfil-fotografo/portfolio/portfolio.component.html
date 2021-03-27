@@ -1,6 +1,24 @@
-<div class="container">
+<!-- <div class="container">
     <form action="/profile" method="post" enctype="multipart/form-data">
         <input type="file" name="avatar" />
     </form>
 
+</div>
+ -->
+<form class="form-group" (ngSubmit)="onSubmit()">
+
+    <input type="file" class="form-control" name="imagen" (change)="onChange($event)">
+
+    <input type="submit" value="Enviar">
+</form>
+
+
+
+<div class="container">
+    <div class="producto" *ngFor="let imagen  of imagenes">
+        <div class="contenedor"></div>
+
+        <img class="img" [src]="'http://localhost:3000/api/fotografos/private/images' + imagen.imagen">
+
+    </div>
 </div>
