@@ -14,7 +14,8 @@ export interface Fotografo {
     modelos: boolean,
     artistica: boolean,
     documental: boolean,
-    deportes: boolean
+    deportes: boolean,
+    imagen: string
 
 
 }

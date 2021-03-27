@@ -68,11 +68,14 @@ export class PrincipalComponent implements OnInit {
     console.log($event.target);
     this.filtros[$event.target.value] = $event.target.checked;
     console.log(this.filtros);
+
   }
 
   async onClick() {
 
+
     this.arrFotografos = await this.fotografoService.getByCategory(this.filtros)
+
 
 
 

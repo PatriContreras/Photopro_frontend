@@ -55,6 +55,9 @@ export class FotografoService {
   }
 
 
+  createImage(fd: FormData): Promise<any> {
+    return this.httpClient.post(`${this.privateUrl}/upload`, fd, this.createHeaders()).toPromise();
+  }
 
   createHeaders() {
     return {
