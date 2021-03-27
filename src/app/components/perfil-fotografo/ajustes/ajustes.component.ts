@@ -89,9 +89,6 @@ export class AjustesComponent implements OnInit {
 
         ]),
       direccion: new FormControl(fotografo.direccion, [
-
-
-
       ]),
 
       password: new FormControl([
@@ -106,41 +103,12 @@ export class AjustesComponent implements OnInit {
 
   }
 
-
-
-  // passwordValidator(form: FormGroup) {
-  //   const passwordValue = form.get('password').value;
-  //   const passwordRepeatValue = form.get('password_2').value;
-
-  //   if (passwordValue === passwordRepeatValue) {
-  //     return null;
-  //   } else { return { passwordValidator: true } }
-
-  // }
-  // checkValidator(controlName, validatorName) {
-  //   return this.formulario.get(controlName).hasError(validatorName) && this.formulario.get(controlName).touched;
-  //   //pa que era
-
-
-  // }
-
   async onSubmit() {
-
-
-
-
-
 
     const response = await this.fotografoService.upDateFotografo(this.formulario.value)
     console.log('fotografo-ajustes', response);
 
     this.router.navigate(['/fotografo'])
-
-
-
-
-
-
 
   }
 
