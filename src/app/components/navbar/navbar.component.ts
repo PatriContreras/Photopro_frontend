@@ -8,21 +8,31 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  show: boolean;
 
-  ngOnInit(): void {
+
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+    if (localStorage.getItem('token_cliente') || localStorage.getItem('token_fotografo')) {
+      this.show = true;
+    } else {
+      this.show = false;
+    }
+
   }
 
   logOut() {
 
     if (localStorage.getItem('token_cliente')) {
-      localStorage.removeItem('token_cliente')
+      localStorage.removeItem('token_cliente');
 
     } else {
-      localStorage.removeItem('token_fotografo')
+      localStorage.removeItem('token_fotografo');
     }
-
-    this.router.navigate(['/'])
+    this.show = false;
+    this.router.navigate(['/']);
 
   }
 }
