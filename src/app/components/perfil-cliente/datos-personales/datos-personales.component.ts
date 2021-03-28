@@ -86,15 +86,8 @@ export class DatosPersonalesComponent implements OnInit {
 
 
 
-      ]),
-
-      password: new FormControl('', [
-
-      ]),
-
-      password_2: new FormControl('', [
-
       ])
+
     })
 
 

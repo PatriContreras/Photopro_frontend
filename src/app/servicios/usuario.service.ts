@@ -34,6 +34,10 @@ export class UsuarioService {
     return this.httpClient.put(this.privateUrl, formValues, this.createHeaders()).toPromise();
   }
 
+  updatePasswordCliente(formValues) {
+    return this.httpClient.patch(this.privateUrl, formValues, this.createHeaders()).toPromise();
+  }
+
   deleteCliente(): Promise<any> {
     return this.httpClient.delete(`${this.privateUrl}`, this.createHeaders()).toPromise();
 

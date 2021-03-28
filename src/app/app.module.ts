@@ -24,7 +24,8 @@ import { DisponibilidadComponent } from './components/perfil-fotografo/disponibi
 import { HttpClientModule } from '@angular/common/http';
 import { MenuAjustesComponent } from './components/menu-ajustes/menu-ajustes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component'
+import { FooterComponent } from './components/footer/footer.component';
+import { PasswordComponent } from './components/password/password.component'
 
 
 
@@ -50,7 +51,8 @@ import { FooterComponent } from './components/footer/footer.component'
     DisponibilidadComponent,
     MenuAjustesComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PasswordComponent
 
   ],
   imports: [

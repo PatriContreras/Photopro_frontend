@@ -89,13 +89,8 @@ export class AjustesComponent implements OnInit {
 
         ]),
       direccion: new FormControl(fotografo.direccion, [
-      ]),
+      ])
 
-      password: new FormControl([
-
-      ]),
-
-      password_2: new FormControl()
     })
 
 

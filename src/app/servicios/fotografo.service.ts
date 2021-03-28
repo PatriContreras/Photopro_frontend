@@ -36,6 +36,11 @@ export class FotografoService {
     return this.httpClient.put(this.privateUrl, formValues, this.createHeaders()).toPromise();
   }
 
+  updatePasswordFotografo(formValues) {
+    return this.httpClient.patch(this.privateUrl, formValues, this.createHeaders()).toPromise();
+  }
+
+
   deleteFotografo(): Promise<any> {
     return this.httpClient.delete(`${this.privateUrl}`, this.createHeaders()).toPromise();
 
@@ -58,6 +63,7 @@ export class FotografoService {
   createImage(fd: FormData): Promise<any> {
     return this.httpClient.post(`${this.privateUrl}/upload`, fd, this.createHeaders()).toPromise();
   }
+
 
   createHeaders() {
     return {
