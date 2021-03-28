@@ -1,73 +1,80 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+<app-navbar></app-navbar>
 
+<div class="container">
     <h1 class="form-titulo">Registro</h1>
-
-    <div class="form-group">
-        <label for="">Nombre</label>
-        <input type="text" id="" class="form-control" formControlName="nombre">
-
-        <p class="error" *ngIf="formulario.get('nombre').hasError('required')&& formulario.get('nombre').touched">
-            *El
-            campo
-            nombre es
-            requerido</p>
-    </div>
-
-
-    <div class="form-group">
-        <label for="">Apellidos</label>
-        <input type="text" id="" class="form-control" formControlName="apellidos">
-        <p class="error" *ngIf="formulario.get('apellidos').hasError('required')&& formulario.get('apellidos').touched">
-            *El
-            campo
-            nombre es
-            requerido</p>
-
-    </div>
-
-    <p class="error" *ngIf="formulario.get('apellidos').hasError('minlength')&& formulario.get('apellidos').touched">
-        *la longitud mayor de 4
-    </p>
-
-    <div class="form-group">
-        <label for="">Dirección</label>
-        <input type="text" id="" class="form-control" formControlName="direccion">
-
-    </div>
-
-    <div class="form-group">
-        <label for="">Email</label>
-        <input type="text" id="" class="form-control" formControlName="email">
-        <p class="error" *ngIf="checkValidator('email','pattern')">*Formato incorrecto</p>
-
-    </div>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
 
 
 
-    <div class="form-group">
-        <label for="">Contraseña</label>
-        <input type="password" id="" class="form-control" formControlName="password">
-        <p class="error" *ngIf="checkValidator('password','pattern')">*El formato de la contraseña es incorrecto
+        <div class="form-group">
+            <label for="">Nombre</label>
+            <input type="text" id="" class="form-control" formControlName="nombre">
+
+            <p class="error" *ngIf="formulario.get('nombre').hasError('required')&& formulario.get('nombre').touched">
+                *El
+                campo
+                nombre es
+                requerido</p>
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Apellidos</label>
+            <input type="text" id="" class="form-control" formControlName="apellidos">
+            <p class="error"
+                *ngIf="formulario.get('apellidos').hasError('required')&& formulario.get('apellidos').touched">
+                *El
+                campo
+                nombre es
+                requerido</p>
+
+        </div>
+
+        <p class="error"
+            *ngIf="formulario.get('apellidos').hasError('minlength')&& formulario.get('apellidos').touched">
+            *la longitud mayor de 4
         </p>
-    </div>
+
+        <div class="form-group">
+            <label for="">Dirección</label>
+            <input type="text" id="" class="form-control" formControlName="direccion">
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="text" id="" class="form-control" formControlName="email">
+            <p class="error" *ngIf="checkValidator('email','pattern')">*Formato incorrecto</p>
+
+        </div>
 
 
-    <div class="form-group">
-        <label for="">Repite la contraseña</label>
-        <input type="password" id="" class="form-control" formControlName="password_2">
-        <p class="error" *ngIf="formulario.hasError('passwordvalidator')">Los campos de contraseña deben
-            coincidir
-        </p>
-    </div>
+
+        <div class="form-group">
+            <label for="">Contraseña</label>
+            <input type="password" id="" class="form-control" formControlName="password">
+            <p class="error" *ngIf="checkValidator('password','pattern')">*El formato de la contraseña es incorrecto
+            </p>
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Repite la contraseña</label>
+            <input type="password" id="" class="form-control" formControlName="password_2">
+            <p class="error" *ngIf="formulario.hasError('passwordvalidator')">Los campos de contraseña deben
+                coincidir
+            </p>
+        </div>
 
 
 
-    <div class="enviar">
+
         <input type="submit" value="Enviar" class="btn btn-info btn-block" [disabled]="formulario.valid">
-    </div>
 
 
-</form>
+
+    </form>
+</div>
 
 
 
@@ -84,3 +91,5 @@
         </div>
     </div>
 </div>
+
+<app-footer></app-footer>

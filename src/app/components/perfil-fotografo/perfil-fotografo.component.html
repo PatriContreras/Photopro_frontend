@@ -1,56 +1,54 @@
 <app-navbar></app-navbar>
-<div class="container">
-    <header>
+
+<header>
 
 
-        <div class="contenedor">
-            <div class="imagen">
-                <a href=""><img src="" alt=""></a>
-            </div>
-
-
-            <h1>{{fotografo?.nombre}} {{fotografo?.apellidos}}</h1>
-
-            <div class="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <h3>{{fotografo?.direccion}}</h3>
-
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fas fa-link"></i>
-            </div>
+    <div class="contenedor">
+        <div class="imagen">
+            <a href=""><img src="" alt=""></a>
         </div>
 
 
+        <h1>{{fotografo?.nombre}} {{fotografo?.apellidos}}</h1>
 
-        <div class="botonera">
-            <div class="btn-group btn-group-justified">
-                <button [routerLink]="['/fotografo/portfolio']" type="button"
-                    class="btn btn-secondary">Portfolio</button>
-                <button [routerLink]="['/fotografo/bio']" type="button" class="btn btn-secondary">Bio</button>
-                <button [routerLink]="['/fotografo/opiniones']" type="button" class="btn btn-secondary">Reseñas</button>
-                <button [routerLink]="['/fotografo/contacto']" type="button" class="btn btn-secondary">Contacto</button>
-                <button [routerLink]="['/fotografo/disponibilidad']" type="button"
-                    class="btn btn-secondary">Disponibilidad</button>
-            </div>
+        <div class="">
+            <i class="fas fa-map-marker" aria-hidden="true"></i>
+            <h3>{{fotografo?.direccion}}</h3>
+
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fas fa-link"></i>
         </div>
-
-        <a [routerLink]="['/fotografo/menuajustes']"><i class="fa fa-cog" aria-hidden="true"></i></a>
-
+    </div>
 
 
-        <!-- foto portasa, foto perfil, y portfolio, bio reseñas, mensajes -->
-        <!-- tres componentes mas -->
-    </header>
-    <main>
 
-        <!--   <div class="container">
+    <div class="botonera">
+        <div class="btn-group btn-group-justified">
+            <button [routerLink]="['/fotografo/portfolio']" type="button" class="btn btn-secondary">Portfolio</button>
+            <button [routerLink]="['/fotografo/bio']" type="button" class="btn btn-secondary">Bio</button>
+            <button [routerLink]="['/fotografo/opiniones']" type="button" class="btn btn-secondary">Reseñas</button>
+            <button [routerLink]="['/fotografo/contacto']" type="button" class="btn btn-secondary">Contacto</button>
+            <button [routerLink]="['/fotografo/disponibilidad']" type="button"
+                class="btn btn-secondary">Disponibilidad</button>
+        </div>
+    </div>
+
+    <a [routerLink]="['/fotografo/menuajustes']"><i class="fa fa-cog" class="ajustes" aria-hidden="true"></i></a>
+
+
+
+    <!-- foto portasa, foto perfil, y portfolio, bio reseñas, mensajes -->
+    <!-- tres componentes mas -->
+</header>
+<main>
+
+    <!--   <div class="container">
             <div></div>
             <div></div>
             <div></div>
 
         </div> -->
-        <router-outlet></router-outlet>
-        <!--  fotografias, bio, reseñas y mensajes -->
-    </main>
-</div>
+    <router-outlet></router-outlet>
+    <!--  fotografias, bio, reseñas y mensajes -->
+</main>
