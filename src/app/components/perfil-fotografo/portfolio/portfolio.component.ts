@@ -14,13 +14,19 @@ export class PortfolioComponent implements OnInit {
 
   formulario: FormGroup;
   files;
-  imagenes: Fotografo
+  imagenes: Fotografo[]
   constructor(
     private fotografoService: FotografoService,
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+
+    this.imagenes = await this.fotografoService.getAllImages();
+    console.log(this.imagenes);
+
+
+
   }
 
 
