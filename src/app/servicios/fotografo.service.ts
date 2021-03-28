@@ -16,7 +16,7 @@ export class FotografoService {
   constructor(private httpClient: HttpClient) {
 
     this.baseUrl = 'http://localhost:3000/api/fotografos';
-    this.privateUrl = 'http://localhost:3000/api/fotografos/private'
+    this.privateUrl = 'http://localhost:3000/api/fotografos/private';
 
 
     this.fotografos = []
@@ -64,6 +64,9 @@ export class FotografoService {
     return this.httpClient.post(`${this.privateUrl}/upload`, fd, this.createHeaders()).toPromise();
   }
 
+  getAllImages(): Promise<any> {
+    return this.httpClient.get(`${this.privateUrl}/imagenes`).toPromise();
+  }
 
   createHeaders() {
     return {
