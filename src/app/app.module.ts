@@ -25,7 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenuAjustesComponent } from './components/menu-ajustes/menu-ajustes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PasswordComponent } from './components/password/password.component'
+import { PasswordComponent } from './components/password/password.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
+import { BiografiaDetalleComponent } from './biografia-detalle/biografia-detalle.component';
+import { BioDetalleComponent } from './components/detalle/bio-detalle/bio-detalle.component';
+import { DetPortfolioComponent } from './det-portfolio/det-portfolio.component'
 
 
 
@@ -52,7 +56,11 @@ import { PasswordComponent } from './components/password/password.component'
     MenuAjustesComponent,
     NavbarComponent,
     FooterComponent,
-    PasswordComponent
+    PasswordComponent,
+    DetalleComponent,
+    BiografiaDetalleComponent,
+    BioDetalleComponent,
+    DetPortfolioComponent
 
   ],
   imports: [

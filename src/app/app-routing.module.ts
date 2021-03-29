@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccesoComponent } from './components/acceso/acceso.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
+
 import { FormularioClienteComponent } from './components/formulario-cliente/formulario-cliente.component';
 
 import { FormularioComponent } from './components/formulario/formulario.component';
@@ -62,6 +64,7 @@ const routes: Routes = [
   { path: 'cliente/reservas', component: ReservasComponent },
   { path: 'cliente/datos-personales', component: DatosPersonalesComponent },
   { path: 'descubrir', component: PrincipalComponent },
+  { path: 'descubrir/:fotografoId', component: DetalleComponent },
   { path: '**', redirectTo: '' }
 
 ];

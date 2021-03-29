@@ -30,8 +30,8 @@ export class FotografoService {
     return this.httpClient.get(`${this.baseUrl}/perfil`, this.createHeaders()).toPromise();
 
   }
-  vistaById() {
-    return this.httpClient.get(`${this.privateUrl}/vista_perfil`).toPromise();
+  vistaById(fotografoId): Promise<any> {
+    return this.httpClient.get(`${this.baseUrl}/vista_perfil`, fotografoId).toPromise();
   }
 
   upDateFotografo(formValues) {

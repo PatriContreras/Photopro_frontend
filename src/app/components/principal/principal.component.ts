@@ -1,6 +1,7 @@
 import { NONE_TYPE } from '@angular/compiler';
 import { normalizeGenFileSuffix } from '@angular/compiler/src/aot/util';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Fotografo } from 'src/app/interfaces/fotografo';
 import { FotografoService } from 'src/app/servicios/fotografo.service';
 
@@ -15,12 +16,15 @@ export class PrincipalComponent implements OnInit {
   mainStyle: any;
   descubrirTexto: any;
   arrFotografos: Fotografo[];
+  fotografo: Fotografo;
   filtros: any;
 
 
 
 
-  constructor(private fotografoService: FotografoService) {
+  constructor(private fotografoService: FotografoService,
+    private activatedRoute: ActivatedRoute) {
+
     this.filtros = {}
     this.sideNavStyle = {
       width: 0,
@@ -82,4 +86,31 @@ export class PrincipalComponent implements OnInit {
 
   }
 
+  async deleteFiltros() {
+
+    this.arrFotografos = await this.fotografoService.getAllFotografos()
+  }
+  /* onView() {
+
+    this.activatedRoute.params.subscribe(async params => {
+      console.log(params);
+
+      this.fotografo = await this.fotografoService.vistaById(params.fotografoId)
+      console.log(params.fotografoId);
+
+
+
+    })
+
+  } */
+
 }
+
+
+/* this.activatedRoute.params.subscribe(async params => {
+
+  this.fotografo = await this.fotografoService.fotografoById(params.fotografoId);
+-      console.log(this.fotografo);
++      console.log('fotografo perfilfot ngoninit', this.fotografo);
+
+*/
