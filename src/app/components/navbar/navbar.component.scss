@@ -27,6 +27,9 @@ nav {
     .textright {
         text-align: right;
         margin-top: 20px;
+        :hover {
+            color: $colorAzul;
+        } 
 
     }
 
@@ -36,12 +39,16 @@ nav {
         color: white;
         font-size: 1.4em;
         margin-top: 15px;
-           
+          
         i {
             color: white;
-            padding: 12px;
+            margin-right: 10px;
+            :hover {
+                color: $colorAzul;
+            } 
         }
-    }
+    }    
+        
 }
 
 .title {
