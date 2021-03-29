@@ -11,7 +11,7 @@ export class ContactoComponent implements OnInit {
 
   fotografo: Fotografo
 
-  constructor(private fotografoService: FotografoService,) { }
+  constructor(private fotografoService: FotografoService) { }
 
   async ngOnInit() {
     this.fotografo = await this.fotografoService.fotografoById();

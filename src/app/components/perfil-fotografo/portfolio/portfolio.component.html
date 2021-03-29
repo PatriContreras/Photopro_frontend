@@ -7,10 +7,12 @@
  -->
 <form class="form-group" (ngSubmit)="onSubmit()">
 
-    <input type="file" class="form-control" name="imagen" (change)="onChange($event)">
+    <div class="container">
 
-    <input type="submit" value="Enviar">
+        <input type="file" class="form-control" name="imagen" (change)="onChange($event)">
 
+        <input class="btn btn-outline-dark" type="submit" value="Enviar">
+    </div>
 
 
 
