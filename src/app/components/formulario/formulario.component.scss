@@ -39,7 +39,7 @@ p{
 
  h1 {
     width: 70%;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-left: 17% ;
     background-color:#587886;
     color: white;
@@ -64,7 +64,8 @@ p{
 
 
 .carousel{
-
+  background-position: center;
+ 
   background-size: cover;
  
   width: 100%;
@@ -78,7 +79,7 @@ p{
   z-index: -2;
   
       img{
-        height: 1000px;
+        height: 105vh;
       }
 }
 
