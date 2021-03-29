@@ -2,7 +2,6 @@
 
 main {
     display: flex;
-    height: 90vh;
 }
 
 .imagen-container {
@@ -10,18 +9,19 @@ main {
     background-image: url(../../../assets/images/perfil-cliente/imagenCliente.jpg);
     background-size: cover;
     background-position:  center center;
+    height: 89vh;
 }
 
 .perfil-cliente {
     width: 50%;
     display: block;
     align-content: flex-end;
-    height: 100vh;
     div {
         border-top: $colorPrimario 5px solid;
         border-left: $colorPrimario 3px solid;
     }
     .bienvenida {
+        border-top: 0;
         font-family: $titleFont;
         background-color: $colorAzul;
         color: $colorPrimario;
@@ -35,9 +35,10 @@ main {
     .opciones {
         font-family: $normalFont;
         background-color: $colorAzul;
-        
-        //padding: 30px;
-        font-size: 1.5em;
+        height: 11.5vh;
+            padding-top: 25px;
+            font-size: 1.5em;
+            padding-left: 5%;
         a {
             text-decoration: none;
             color: $colorPrimario;
