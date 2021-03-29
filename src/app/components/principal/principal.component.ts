@@ -16,7 +16,7 @@ export class PrincipalComponent implements OnInit {
   mainStyle: any;
   descubrirTexto: any;
   arrFotografos: Fotografo[];
-  fotografo: Fotografo;
+  fotografo: any;
   filtros: any;
 
 
@@ -90,19 +90,7 @@ export class PrincipalComponent implements OnInit {
 
     this.arrFotografos = await this.fotografoService.getAllFotografos()
   }
-  /* onView() {
 
-    this.activatedRoute.params.subscribe(async params => {
-      console.log(params);
-
-      this.fotografo = await this.fotografoService.vistaById(params.fotografoId)
-      console.log(params.fotografoId);
-
-
-
-    })
-
-  } */
 
 }
 

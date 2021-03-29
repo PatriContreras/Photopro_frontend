@@ -1,29 +1,12 @@
-<!-- <div class="container">
-    <form action="/profile" method="post" enctype="multipart/form-data">
-        <input type="file" name="avatar" />
-    </form>
-
-</div>
- -->
-<form class="form-group" (ngSubmit)="onSubmit()">
-
-    <input type="file" class="form-control" name="imagen" (change)="onChange($event)">
-
-    <input type="submit" value="Enviar">
-
-
-
-
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-3 imagen" *ngFor="let imagen  of url"
-                [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/'+imagen.url+')'}">
+<div class="container">
+    <div class="row no-gutters">
+        <div class="col-3 imagen" *ngFor="let imagen  of url"
+            [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/'+imagen.url+')'}">
 
 
 
 
 
-            </div>
         </div>
     </div>
-</form>
+</div>

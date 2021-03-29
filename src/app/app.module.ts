@@ -27,9 +27,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PasswordComponent } from './components/password/password.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
-import { BiografiaDetalleComponent } from './biografia-detalle/biografia-detalle.component';
-import { BioDetalleComponent } from './components/detalle/bio-detalle/bio-detalle.component';
-import { DetPortfolioComponent } from './det-portfolio/det-portfolio.component'
+
+import { BioDetalleComponent } from './components/det-bio/bio-detalle.component';
+import { DetPortfolioComponent } from './components/det-portfolio/det-portfolio.component';
+import { DetContactoComponent } from './components/det-contacto/det-contacto.component';
+import { DetOpinionesComponent } from './components/det-opiniones/det-opiniones.component'
 
 
 
@@ -58,9 +60,11 @@ import { DetPortfolioComponent } from './det-portfolio/det-portfolio.component'
     FooterComponent,
     PasswordComponent,
     DetalleComponent,
-    BiografiaDetalleComponent,
+
     BioDetalleComponent,
-    DetPortfolioComponent
+    DetPortfolioComponent,
+    DetContactoComponent,
+    DetOpinionesComponent
 
   ],
   imports: [

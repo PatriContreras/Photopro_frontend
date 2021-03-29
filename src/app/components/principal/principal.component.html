@@ -87,7 +87,7 @@
     <section>
         <div class="principal">
             <div class="fotografo col-6 col-md-4 col-lg-3" *ngFor="let fotografo of arrFotografos"
-                [routerLink]="['descubrir/:fotografoId']">
+                [routerLink]="['/descubrir', fotografo.id]">
                 <div>
                     <p class="nombre">{{fotografo.nombre}} {{fotografo.apellidos}}</p>
                     <i class="far fa-eye"></i>

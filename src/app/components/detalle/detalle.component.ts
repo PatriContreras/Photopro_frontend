@@ -21,17 +21,25 @@ export class DetalleComponent implements OnInit, AfterViewInit {
     private fotografoService: FotografoService,
     private clienteService: UsuarioService,
     private router: Router,
-    activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute
   ) { }
 
 
-  async ngOnInit() {
+  ngOnInit() {
 
-    /*   this.activa = await this.activated.vistaById(params.fotografoI);
-      console.log(this.fotografo); */
+    this.activatedRoute.params.subscribe(async params => {
+      console.log(params);
 
-    let button: HTMLElement = this.portfolioButton.nativeElement as HTMLElement;
-    button.click();
+      this.fotografo = await this.fotografoService.vistaById(params.fotografoId)
+      console.log(params.fotografoId);
+
+
+      let button: HTMLElement = this.portfolioButton.nativeElement as HTMLElement;
+      button.click();
+    })
+
+
+
   }
 
   async onClick() {
