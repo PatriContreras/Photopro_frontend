@@ -86,9 +86,10 @@ export class PrincipalComponent implements OnInit {
 
   }
 
-  async deleteFiltros() {
+  async deleteFiltros($event) {
 
-    this.arrFotografos = await this.fotografoService.getAllFotografos()
+    this.arrFotografos = await this.fotografoService.getAllFotografos();
+
   }
 
 
