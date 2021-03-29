@@ -15,10 +15,13 @@
 
 
     <div class="container">
-        <div class="producto" *ngFor="let imagen  of url">
-            <div class="contenedor">
+        <div class="row no-gutters">
+            <div class="col-3 imagen" *ngFor="let imagen  of url"
+                [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/'+imagen.url+')'}">
 
-                <img class="img" [src]="'http://localhost:3000/images/' + imagen.url">
+
+
+
 
             </div>
         </div>

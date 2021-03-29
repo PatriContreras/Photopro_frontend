@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<header>
+
+
+    <div class="contenedor">
+        <div class="imagen">
+            <a href=""><img src="" alt=""></a>
+        </div>
+
+
+        <h1>{{fotografo?.nombre}} {{fotografo?.apellidos}}</h1>
+
+        <div class="">
+            <i class="fas fa-map-marker" aria-hidden="true"></i>
+            <h3>{{fotografo?.direccion}}</h3>
+            <div class="iconos">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fas fa-link"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="botonera">
+        <div class="btn-group btn-group-justified">
+            <button [routerLink]="['/descubrir', fotografo.id,'portfolio']" type="button" class="btn btn-secondary"
+                #portfolioButton>Portfolio</button>
+            <button [routerLink]="['/descubrir', fotografo.id,'bio']" type="button"
+                class="btn btn-secondary">Bio</button>
+            <button [routerLink]="['/descubrir', fotografo.id,'opiniones']" type="button"
+                class="btn btn-secondary">Reseñas</button>
+            <button [routerLink]="['/descubrir', fotografo.id,'contacto']" type="button"
+                class="btn btn-secondary">Contacto</button>
+            <button [routerLink]="['/descubrir', fotografo.id,'disponibilidad']" type="button"
+                class="btn btn-secondary">Disponibilidad</button>
+            <i class="far fa-heart" (click)="onClick()"></i>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- foto portasa, foto perfil, y portfolio, bio reseñas, mensajes -->
+    <!-- tres componentes mas -->
+</header>
+<main>
+
+    <!--   <div class="container">
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div> -->
+    <router-outlet></router-outlet>
+    <!--  fotografias, bio, reseñas y mensajes -->
+</main>

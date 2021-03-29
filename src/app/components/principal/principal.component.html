@@ -22,10 +22,7 @@
 
                 <div id="filtros">
                     <p>Tipo de fotografía</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="todos" (change)="onChange($event)">
-                        <label class="form-check-label">Todos</label>
-                    </div>
+
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="bodas" (change)="onChange($event)">
                         <label class="form-check-label">Bodas</label>
@@ -71,6 +68,7 @@
                 </div>
 
                 <input type="submit" class="btn btn-primary" value="Filtrar" (click)="onClick()">
+                <input type="submit" class="btn btn-primary" value="borrarFiltrar" (click)="deleteFiltros()">
 
 
             </form>
@@ -89,7 +87,7 @@
     <section>
         <div class="principal">
             <div class="fotografo col-6 col-md-4 col-lg-3" *ngFor="let fotografo of arrFotografos"
-                [routerLink]="['/fotografo/perfil']">
+                [routerLink]="['/descubrir', fotografo.id]">
                 <div>
                     <p class="nombre">{{fotografo.nombre}} {{fotografo.apellidos}}</p>
                     <i class="far fa-eye"></i>

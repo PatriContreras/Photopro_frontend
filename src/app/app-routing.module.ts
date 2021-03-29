@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccesoComponent } from './components/acceso/acceso.component';
+import { BioDetalleComponent } from './components/det-bio/bio-detalle.component';
+import { DetPortfolioComponent } from './components/det-portfolio/det-portfolio.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
+
 import { FormularioClienteComponent } from './components/formulario-cliente/formulario-cliente.component';
 
 import { FormularioComponent } from './components/formulario/formulario.component';
@@ -19,8 +23,10 @@ import { OpinionesComponent } from './components/perfil-fotografo/opiniones/opin
 import { PerfilFotografoComponent } from './components/perfil-fotografo/perfil-fotografo.component';
 import { PortfolioComponent } from './components/perfil-fotografo/portfolio/portfolio.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { DetContactoComponent } from './components/det-contacto/det-contacto.component';
 import { LoginClienteGuard } from './guards/login-cliente.guard';
 import { LoginFotografoGuard } from './guards/login-fotografo.guard';
+import { DetOpinionesComponent } from './components/det-opiniones/det-opiniones.component';
 
 
 const routes: Routes = [
@@ -62,6 +68,25 @@ const routes: Routes = [
   { path: 'cliente/reservas', component: ReservasComponent },
   { path: 'cliente/datos-personales', component: DatosPersonalesComponent },
   { path: 'descubrir', component: PrincipalComponent },
+  {
+    path: 'descubrir/:fotografoId', component: DetalleComponent,
+    children: [
+      {
+        path: 'opiniones', component: DetOpinionesComponent
+      },
+      {
+        path: 'bio', component: BioDetalleComponent
+      },
+      {
+        path: 'portfolio', component: DetPortfolioComponent
+      },
+      {
+        path: 'contacto', component: DetContactoComponent
+      },
+
+
+    ]
+  },
   { path: '**', redirectTo: '' }
 
 ];
