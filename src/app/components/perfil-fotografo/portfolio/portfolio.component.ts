@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Fotografo } from 'src/app/interfaces/fotografo';
 import { Imagenes } from 'src/app/interfaces/imagenes';
 import { FotografoService } from 'src/app/servicios/fotografo.service';
 

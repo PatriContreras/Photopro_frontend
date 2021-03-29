@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Fotografo } from 'src/app/interfaces/fotografo';
 import { FotografoService } from 'src/app/servicios/fotografo.service';
@@ -9,11 +9,14 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
   templateUrl: './perfil-fotografo.component.html',
   styleUrls: ['./perfil-fotografo.component.scss']
 })
-export class PerfilFotografoComponent implements OnInit {
+
+export class PerfilFotografoComponent implements OnInit, AfterViewInit {
 
   idFotografo: Number;
   fotografo: Fotografo;
   favoritos: any;
+  @ViewChild('portfolioButton') portfolioButton: ElementRef;
+  ngAfterViewInit() { this.portfolioButton.nativeElement.click() }
 
   constructor(
     private fotografoService: FotografoService,
@@ -32,7 +35,8 @@ export class PerfilFotografoComponent implements OnInit {
     this.fotografo = await this.fotografoService.fotografoById();
     console.log(this.fotografo);
 
-
+    let button: HTMLElement = this.portfolioButton.nativeElement as HTMLElement;
+    button.click();
 
   }
 

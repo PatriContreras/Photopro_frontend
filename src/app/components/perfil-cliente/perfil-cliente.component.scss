@@ -2,7 +2,7 @@
 
 main {
     display: flex;
-    height: 100vh;
+    height: 90vh;
 }
 
 .imagen-container {
@@ -16,15 +16,16 @@ main {
     width: 50%;
     display: block;
     align-content: flex-end;
+    height: 100vh;
     div {
         border-top: $colorPrimario 5px solid;
         border-left: $colorPrimario 3px solid;
     }
     .bienvenida {
         font-family: $titleFont;
-        background-color: $colorPrimario;
-        color: $colorSecundario;
-        padding: 50px;
+        background-color: $colorAzul;
+        color: $colorPrimario;
+        padding: 10px;
         font-size: 2.8em;
         p {
             text-align: center;
@@ -33,8 +34,9 @@ main {
 
     .opciones {
         font-family: $normalFont;
-        background-color: $colorSecundario;
-        padding: 50px;
+        background-color: $colorAzul;
+        
+        //padding: 30px;
         font-size: 1.5em;
         a {
             text-decoration: none;
