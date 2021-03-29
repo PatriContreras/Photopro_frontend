@@ -2,8 +2,8 @@
 
 
 form{
-    position: relative;
-  width: 70%;
+  position: relative;
+  width: 69%;
   background-color: rgb(255, 255, 255, 0.9);
   padding: 25px;
   margin-top: auto;
@@ -18,7 +18,7 @@ form{
         grid-column-start: 2;
         grid-column-end:3;
         height: 35px;
-        margin-top: 50px;
+        margin-top: 20px;
     }
   
   
@@ -33,9 +33,9 @@ form .form-group{
 
 
  h1 {
-    width: 70%;
-    margin-top: 200px;
-    margin-left: 17% ;
+    width: 50vw;
+    margin-top: 10%;
+    margin-left: 26% ;
     background-color:#587886;
     color: white;
     font-size: 25px;
@@ -43,28 +43,30 @@ form .form-group{
     font-weight: 200px;
     text-align: center;
     font-family: $secondTitle;
+  } 
 
 
 
 
-}
+
 
 
 .carousel{
-
+  background-position: center ;
   background-size: cover;
  
-  width: 100%;
+  width: 100vw;
   opacity: 0.5;
   
   position: absolute;
-   top:-50px;
+  top:-50px;
     
    
   opacity: 0.7;
   z-index: -2;
   img{
-    height: 1000px;
+    height: 100vh;
   }
 }
+
 
