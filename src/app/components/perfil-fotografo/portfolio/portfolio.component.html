@@ -15,10 +15,10 @@
 
 
     <div class="container">
-        <div class="producto" *ngFor="let imagen  of imagenes">
+        <div class="producto" *ngFor="let imagen  of url">
             <div class="contenedor">
 
-                <img class="img" [src]="'http://localhost:3000/api/fotografos/private/imagenes' + imagen.imagen">
+                <img class="img" [src]="'http://localhost:3000/images/' + imagen.url">
 
             </div>
         </div>

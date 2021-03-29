@@ -42,9 +42,15 @@ export class UsuarioService {
     return this.httpClient.delete(`${this.privateUrl}`, this.createHeaders()).toPromise();
 
   }
+
+  addFavoritos() {
+    return this.httpClient.post(`${this.privateUrl}/favoritos`, this.createHeaders()).toPromise();
+  }
+
   login(formValues): Promise<any> {
     return this.httpClient.post(`${this.baseUrl}/login_cliente`, formValues).toPromise();
   }
+
 
   createHeaders() {
     return {

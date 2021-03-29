@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Fotografo } from 'src/app/interfaces/fotografo';
+import { Imagenes } from 'src/app/interfaces/imagenes';
 import { FotografoService } from 'src/app/servicios/fotografo.service';
 
 
@@ -14,7 +15,8 @@ export class PortfolioComponent implements OnInit {
 
   formulario: FormGroup;
   files;
-  imagenes: Fotografo[]
+  url: Imagenes[];
+
   constructor(
     private fotografoService: FotografoService,
     private router: Router
@@ -22,8 +24,8 @@ export class PortfolioComponent implements OnInit {
 
   async ngOnInit() {
 
-    this.imagenes = await this.fotografoService.getAllImages();
-    console.log(this.imagenes);
+    this.url = await this.fotografoService.getAllImages();
+    console.log(this.url);
 
 
 

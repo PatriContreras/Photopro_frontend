@@ -65,7 +65,7 @@ export class FotografoService {
   }
 
   getAllImages(): Promise<any> {
-    return this.httpClient.get(`${this.privateUrl}/imagenes`).toPromise();
+    return this.httpClient.get(`${this.privateUrl}/imagenes`, this.createHeaders()).toPromise();
   }
 
   createHeaders() {
