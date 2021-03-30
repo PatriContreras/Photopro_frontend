@@ -74,7 +74,16 @@ export class FotografoService {
   getAllimagesByFotografo(fotografoId): Promise<any> {
     return this.httpClient.get(`${this.baseUrl}/vista_perfil/${fotografoId}/portfolio`).toPromise()
   }
-  //metodo todas las imagenes de un fotografo 
+
+
+  getContactoById(fotografoId): Promise<any> {
+    return this.httpClient.get(`${this.baseUrl}/vista_perfil/${fotografoId}/contacto`).toPromise()
+
+  }
+
+  getBioById(fotografoId): Promise<any> {
+    return this.httpClient.get(`${this.baseUrl}/vista_perfil/${fotografoId}/bio`).toPromise()
+  }
 
   createHeaders() {
     return {

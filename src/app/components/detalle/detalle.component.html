@@ -26,17 +26,17 @@
 
     <div class="botonera">
         <div class="btn-group btn-group-justified">
-            <button [routerLink]="['/descubrir', fotografo.id,'portfolio']" type="button" class="btn btn-secondary"
+            <button [routerLink]="['/descubrir', fotografo?.id,'portfolio']" type="button" class="btn btn-secondary"
                 #portfolioButton>Portfolio</button>
-            <button [routerLink]="['/descubrir', fotografo.id,'bio']" type="button"
+            <button [routerLink]="['/descubrir', fotografo?.id,'bio']" type="button"
                 class="btn btn-secondary">Bio</button>
-            <button [routerLink]="['/descubrir', fotografo.id,'opiniones']" type="button"
+            <button [routerLink]="['/descubrir', fotografo?.id,'opiniones']" type="button"
                 class="btn btn-secondary">Reseñas</button>
-            <button [routerLink]="['/descubrir', fotografo.id,'contacto']" type="button"
+            <button [routerLink]="['/descubrir', fotografo?.id,'contacto']" type="button"
                 class="btn btn-secondary">Contacto</button>
-            <button [routerLink]="['/descubrir', fotografo.id,'disponibilidad']" type="button"
+            <button [routerLink]="['/descubrir', fotografo?.id,'disponibilidad']" type="button"
                 class="btn btn-secondary">Disponibilidad</button>
-            <i class="far fa-heart" (click)="onClick()"></i>
+            <i class="fas fa-heart" (click)="onClick()" [ngStyle]="colorHeart"></i>
         </div>
     </div>
 

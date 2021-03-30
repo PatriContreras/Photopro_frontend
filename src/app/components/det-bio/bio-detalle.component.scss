@@ -1,4 +1,4 @@
-@import 'variables';
+ @import 'variables';
 
 
 .container{
@@ -8,7 +8,7 @@
     height: 600px;
     width: 80%;
     
-    background-image:url( "../../../../assets/images/perfil-cliente/imagenCliente.jpg");
+    background-image:url( "../../../assets/images/formulario/4.jpg");
     background-size: cover;
     opacity: 0.8;
     
@@ -45,12 +45,6 @@
         grid-row-end: 5;
         margin-bottom: 10px;
 
-        .presentacion:hover{
-            transform: rotate(30deg);
-            
-
-        }
-
        
 
     }
@@ -68,12 +62,9 @@
 
         }
     }
-    img:hover{
-        transform: rotate(10px);
 
-    }
         
-}
+} 
 
 
 

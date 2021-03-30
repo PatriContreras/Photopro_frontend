@@ -9,13 +9,14 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
   templateUrl: './detalle.component.html',
   styleUrls: ['./detalle.component.scss']
 })
-export class DetalleComponent implements OnInit, AfterViewInit {
+export class DetalleComponent implements OnInit {
+  colorHeart: any;
   idFotografo: Number;
   fotografo: Fotografo;
   favoritos: any;
 
-  @ViewChild('portfolioButton') portfolioButton: ElementRef;
-  ngAfterViewInit() { this.portfolioButton.nativeElement.click() }
+  /* @ViewChild('portfolioButton') portfolioButton: ElementRef;
+  ngAfterViewInit() { this.portfolioButton.nativeElement.click() } */
 
   constructor(
     private fotografoService: FotografoService,
@@ -34,8 +35,8 @@ export class DetalleComponent implements OnInit, AfterViewInit {
       console.log(params.fotografoId);
 
 
-      let button: HTMLElement = this.portfolioButton.nativeElement as HTMLElement;
-      button.click();
+      /*  let button: HTMLElement = this.portfolioButton.nativeElement as HTMLElement;
+       button.click(); */
     })
 
 
@@ -43,6 +44,12 @@ export class DetalleComponent implements OnInit, AfterViewInit {
   }
 
   async onClick() {
+
+
+    this.colorHeart = {
+      color: 'red',
+
+    }
 
     this.favoritos = await this.clienteService.addFavoritos();
     console.log(this.favoritos);
