@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Fotografo } from 'src/app/interfaces/fotografo';
 import { FotografoService } from 'src/app/servicios/fotografo.service';
 
@@ -11,11 +12,21 @@ export class DetContactoComponent implements OnInit {
 
   fotografo: Fotografo
 
-  constructor(private fotografoService: FotografoService) { }
+  constructor(private fotografoService: FotografoService,
+    private activatedRouter: ActivatedRoute) { }
 
-  async ngOnInit() {
-    this.fotografo = await this.fotografoService.fotografoById();
-    console.log(this.fotografo);
+
+  ngOnInit() {
+
+    this.activatedRouter.parent.params.subscribe(async params => {
+
+
+      this.fotografo = await this.fotografoService.getContactoById(params.fotografoId)
+
+
+
+
+    })
   }
 
 }

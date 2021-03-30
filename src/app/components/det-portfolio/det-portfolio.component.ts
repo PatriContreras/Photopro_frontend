@@ -13,16 +13,20 @@ export class DetPortfolioComponent implements OnInit {
   formulario: FormGroup;
   files;
   url: Imagenes[];
+
   constructor(private fotografoService: FotografoService,
     private router: Router,
     private activatedRouter: ActivatedRoute) { }
 
   async ngOnInit() {
-    this.url = await this.fotografoService.getAllImages();
-    console.log(this.url);
+
 
     this.activatedRouter.parent.params.subscribe(async params => {
+      console.log(params);
+
       this.url = await this.fotografoService.getAllimagesByFotografo(params.fotografoId);
+      console.log('dentro det-portfolio', params.fotografoId);
+
     })
 
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Fotografo } from 'src/app/interfaces/fotografo';
+import { FotografoService } from 'src/app/servicios/fotografo.service';
 
 @Component({
   selector: 'app-biografia',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BiografiaComponent implements OnInit {
 
-  constructor() { }
+  fotografo: Fotografo
+  constructor(private fotografoService: FotografoService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.fotografo = await this.fotografoService.fotografoById();
+    console.log(this.fotografo);
   }
 
 }

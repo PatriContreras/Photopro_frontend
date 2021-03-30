@@ -1,4 +1,4 @@
-@import 'variables';
+ @import 'variables';
 
 
 .container{
@@ -7,9 +7,11 @@
     margin-top: 10px;
     height: 600px;
     width: 80%;
-    background-image: url('../../../assets/images/formulario/4.jpg');
+    
+    background-image:url( "../../../assets/images/formulario/4.jpg");
     background-size: cover;
     opacity: 0.8;
+    
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr 1fr ;
     .mini{
@@ -43,12 +45,6 @@
         grid-row-end: 5;
         margin-bottom: 10px;
 
-        .presentacion:hover{
-            transform: rotate(30deg);
-            
-
-        }
-
        
 
     }
@@ -59,18 +55,16 @@
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 3;
+        shado
 
         img:hover{
             transform: rotate(10px);
 
         }
     }
-    img:hover{
-        transform: rotate(10px);
 
-    }
         
-}
+} 
 
 
 
