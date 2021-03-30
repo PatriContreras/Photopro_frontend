@@ -83,14 +83,12 @@
     border: none;
   }
 
-  a{
-    display: flex;
-    
-  }
+ 
 
   .fab{
     padding: 20px;
     font-size: 30px;
+    cursor: pointer;
   
     
   }
@@ -98,13 +96,18 @@
   .fas{
     padding: 20px;
     font-size: 30px;
+    cursor: pointer;
   }
 
-  
   .ajustes{
-    padding: 20px;
-    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  .fa{
     color: grey;
-    background-color: brown;
+    
+    padding: 20px;
+    font-size: 100px;
+    cursor: pointer;
 
   }

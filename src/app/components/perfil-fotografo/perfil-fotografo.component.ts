@@ -14,6 +14,8 @@ export class PerfilFotografoComponent implements OnInit, AfterViewInit {
   idFotografo: Number;
   fotografo: Fotografo;
   favoritos: any;
+  files;
+  fotografos: Fotografo[];
 
   @ViewChild('portfolioButton') portfolioButton: ElementRef;
   ngAfterViewInit() { this.portfolioButton.nativeElement.click() }
@@ -39,7 +41,6 @@ export class PerfilFotografoComponent implements OnInit, AfterViewInit {
 
 
   }
-
 
 
 }

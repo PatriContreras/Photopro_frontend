@@ -67,6 +67,8 @@ export class FotografoService {
     return this.httpClient.post(`${this.privateUrl}/upload`, fd, this.createHeaders()).toPromise();
   }
 
+
+
   getAllImages(): Promise<any> {
     return this.httpClient.get(`${this.privateUrl}/imagenes`, this.createHeaders()).toPromise();
   }
@@ -84,6 +86,7 @@ export class FotografoService {
   getBioById(fotografoId): Promise<any> {
     return this.httpClient.get(`${this.baseUrl}/vista_perfil/${fotografoId}/bio`).toPromise()
   }
+
 
   createHeaders() {
     return {
