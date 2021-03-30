@@ -14,7 +14,7 @@ form{
   grid-template-columns: 1fr 1fr 1fr;
  
     .btn{
-        background-color:#587886;
+        background-color: $colorAzul;
         border:none;
         
         grid-column-start: 2;
@@ -41,7 +41,7 @@ p{
     width: 70%;
     margin-top: 50px;
     margin-left: 17% ;
-    background-color:#587886;
+    background-color: $colorAzul;
     color: white;
     font-size: 25px;
     justify-content: center;
