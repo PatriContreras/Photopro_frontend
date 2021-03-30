@@ -1,2 +1,18 @@
 <app-navbar></app-navbar>
-<p>favoritos works!</p>
+<div class="principal">
+    <div class="fotografo col-6 col-md-4 col-lg-3" *ngFor="let favorito of favoritos"
+        [routerLink]="['/descubrir', favorito.id]">
+        <div>
+            <p class="nombre">{{favorito.nombre}} {{favorito.apellidos}}</p>
+            <i class="far fa-eye"></i>
+            <p>{{favorito.direccion}}</p>
+        </div>
+
+
+        <figure>
+            <img src="https://www.dzoom.org.es/wp-content/uploads/2007/02/canon-mejorar-fotografo-consejos-principiantes-novatos-810x540.jpg"
+                alt="">
+        </figure>
+    </div>
+
+</div>

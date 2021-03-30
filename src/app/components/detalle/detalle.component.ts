@@ -51,8 +51,25 @@ export class DetalleComponent implements OnInit {
 
     }
 
-    this.favoritos = await this.clienteService.addFavoritos();
-    console.log(this.favoritos);
+    // this.favoritos = await this.clienteService.addFavoritos(fotografoId);
+    // console.log(this.favoritos);
+
+    if (localStorage.getItem('token_cliente')) {
+      this.activatedRoute.params.subscribe(async params => {
+        console.log(params);
+
+        this.fotografo = await this.clienteService.addFavoritos(params.fotografoId)
+        console.log(params.fotografoId);
+        /*  let button: HTMLElement = this.portfolioButton.nativeElement as HTMLElement;
+         button.click(); */
+      })
+
+    } else {
+      this.router.navigate(['/registro_cliente'])
+    }
+
+
+
 
 
   }
