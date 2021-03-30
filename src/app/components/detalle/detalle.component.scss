@@ -11,6 +11,7 @@
     justify-content: center;
     font-family: $normalFont;
     font-size: 20px; 
+    margin-top: 10px;
 
   }
   .contenedor .ubicacion{
@@ -24,29 +25,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin:10px;
-    margin-left:400px;
-    margin-right: -25px; */
+    
   }
 
-/*   background-size: cover;
- 
-  width: 100%;
-  opacity: 0.5;
-  
-  position: absolute;
-   top:-50px;
-    
-   
-  opacity: 0.7;
-  z-index: -2; */
   .imagen a{
     box-shadow: 0 4px 2px rgba(50,50,50,.50);
     width:200px;
     height: 200px;
     border:7px solid #fff;
 
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/USAF_photographer.jpg/1200px-USAF_photographer.jpg');
+    background: url('https://mott.pe/noticias/wp-content/uploads/2018/03/10-tips-para-saber-cómo-ser-un-buen-fotógrafo-profesional-portada.jpg');
     background-size:cover;
     text-align: center;
     display: block;
@@ -93,6 +81,7 @@
   .fas{
     padding: 20px;
     font-size: 30px;
+    cursor:pointer;
   }
   .fa{
     color: grey;
