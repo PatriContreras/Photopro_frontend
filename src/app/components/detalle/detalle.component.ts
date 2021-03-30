@@ -38,8 +38,6 @@ export class DetalleComponent implements OnInit, AfterViewInit {
       button.click();
     })
 
-
-
   }
 
   onClick() {
@@ -54,6 +52,8 @@ export class DetalleComponent implements OnInit, AfterViewInit {
     } else {
       this.router.navigate(['/registro_cliente'])
     }
+
+
 
   }
 

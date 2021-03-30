@@ -49,6 +49,10 @@ export class UsuarioService {
     return this.httpClient.post(`${this.privateUrl}/favoritos`, body, this.createHeaders()).toPromise();
   }
 
+  getAllFavoritos(): Promise<any> {
+    return this.httpClient.get(`${this.privateUrl}/favoritos`, this.createHeaders()).toPromise();
+  }
+
   login(formValues): Promise<any> {
     return this.httpClient.post(`${this.baseUrl}/login_cliente`, formValues).toPromise();
   }
