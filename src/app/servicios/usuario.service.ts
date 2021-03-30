@@ -43,8 +43,10 @@ export class UsuarioService {
 
   }
 
-  addFavoritos() {
-    return this.httpClient.post(`${this.privateUrl}/favoritos`, this.createHeaders()).toPromise();
+  addFavoritos(fotografoId): Promise<any> {
+    console.log(fotografoId);
+    const body = { fk_fotografo: fotografoId }
+    return this.httpClient.post(`${this.privateUrl}/favoritos`, body, this.createHeaders()).toPromise();
   }
 
   login(formValues): Promise<any> {

@@ -42,11 +42,18 @@ export class DetalleComponent implements OnInit, AfterViewInit {
 
   }
 
-  async onClick() {
+  onClick() {
 
-    this.favoritos = await this.clienteService.addFavoritos();
-    console.log(this.favoritos);
+    if (localStorage.getItem('token_cliente')) {
+      this.activatedRoute.params.subscribe(async params => {
+        console.log(params);
 
+        this.favoritos = await this.clienteService.addFavoritos(params.fotografoId);
+        console.log(this.favoritos);
+      })
+    } else {
+      this.router.navigate(['/registro_cliente'])
+    }
 
   }
 

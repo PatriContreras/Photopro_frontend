@@ -40,13 +40,13 @@ export class PerfilFotografoComponent implements OnInit, AfterViewInit {
 
   }
 
-  async onClick() {
+  // async onClick() {
 
-    this.favoritos = await this.clienteService.addFavoritos();
-    console.log(this.favoritos);
+  //   this.favoritos = await this.clienteService.addFavoritos();
+  //   console.log(this.favoritos);
 
 
-  }
+  // }
 
 
 }
