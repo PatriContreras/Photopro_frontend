@@ -81,7 +81,9 @@
         </div>
 
         <h1 class="title" [routerLink]="['/']"> Photopro </h1>
-        <a [routerLink]="['/login']"><i class="fas fa-user"></i>Log In</a>
+        <a [routerLink]="['/login']" *ngIf="!clienteService.isLogged()"><i class="fas fa-user"></i>Log In</a>
+        <a [routerLink]="['/cliente']" *ngIf="clienteService.isLogged()"><i class="fas fa-user"></i>Perfil</a>
+
     </nav>
 
     <section>

@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Fotografo } from 'src/app/interfaces/fotografo';
 import { FotografoService } from 'src/app/servicios/fotografo.service';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 
 @Component({
   selector: 'app-principal',
@@ -23,7 +24,8 @@ export class PrincipalComponent implements OnInit {
 
 
   constructor(private fotografoService: FotografoService,
-    private activatedRoute: ActivatedRoute) {
+    private activatedRoute: ActivatedRoute,
+    public clienteService: UsuarioService) {
 
     this.filtros = {}
     this.sideNavStyle = {

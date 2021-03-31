@@ -57,6 +57,14 @@ export class UsuarioService {
     return this.httpClient.post(`${this.baseUrl}/login_cliente`, formValues).toPromise();
   }
 
+  isLogged() {
+    if (localStorage.getItem('token_cliente')) {
+      return true
+    } else {
+      return false
+    }
+  }
+
 
   createHeaders() {
     return {

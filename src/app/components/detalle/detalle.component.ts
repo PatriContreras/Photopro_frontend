@@ -64,6 +64,8 @@ export class DetalleComponent implements OnInit {
          button.click(); */
       })
 
+      setTimeout(() => { this.router.navigate(['/cliente']) }, 3000)
+
     } else {
       this.router.navigate(['/registro_cliente'])
     }
