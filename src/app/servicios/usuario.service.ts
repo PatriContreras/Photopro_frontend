@@ -30,7 +30,6 @@ export class UsuarioService {
   }
 
   upDateCliente(formValues) {
-
     return this.httpClient.put(this.privateUrl, formValues, this.createHeaders()).toPromise();
   }
 

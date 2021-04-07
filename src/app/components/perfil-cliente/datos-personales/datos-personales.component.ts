@@ -86,7 +86,14 @@ export class DatosPersonalesComponent implements OnInit {
 
 
 
-      ])
+      ]),
+
+      password: new FormControl(cliente.password,
+        [
+
+
+        ])
+
 
     })
 
@@ -100,7 +107,6 @@ export class DatosPersonalesComponent implements OnInit {
 
 
     const response = await this.usuarioService.upDateCliente(this.formulario.value)
-    console.log('update', response);
 
     this.router.navigate(['/cliente'])
 
